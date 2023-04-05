@@ -1,6 +1,6 @@
 // @https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
 // ScriptName  amap
-// 2023-04-05  15:25
+// 2023-04-06  01:50
 
 // 注释掉以下  //  /* */
 
@@ -13,7 +13,6 @@
     delete obj.data.memberInfo;
   }*/
 // "reviews", // 用户评价
-// "traffic", // 交通出行 地铁站 公交站 停车场
 // "checkIn",
 // "check_in", // 足迹打卡
 // "footprint", // 足迹
@@ -24,7 +23,7 @@
 // "group_buying_shelf",  // 医院口碑推广
 
 /* ================ ⭐️⭐️ ================ */
-// 2023-03-28 18:15
+// 2023-03-31 15:52
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -136,13 +135,13 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     delete obj.data.tipData;
   }
   // 足迹
-  /*if (obj.data.footPrintV2) {
-    delete obj.data.footPrintV2;
-  }*/
+  // if (obj.data.footPrintV2) {
+  //   delete obj.data.footPrintV2;
+  // }
   // 成就勋章 lv1见习达人
-  /*if (obj.data.memberInfo) {
+ /* if (obj.data.memberInfo) {
     delete obj.data.memberInfo;
-  }*/
+  } */
 } else if (url.includes("/shield/frogserver/aocs")) {
   // 整体图层
   const item = [
@@ -180,9 +179,9 @@ if (url.includes("/faas/amap-navigation/main-page")) {
 } else if (url.includes("/shield/search/poi/detail")) {
   // 搜索结果 模块详情
   const item = [
-    "group_buying",  //医院口碑推广
-    "group_buying_shelf",  // 医院口片推广
     // "anchor",
+    "group_buying",  // 医院口碑推广
+    "group_buying_shelf",  // 医院口碑推广
     "adv_compliance_info", // 服务提供方
     "adv_gift",
     // "base_info",
@@ -197,7 +196,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "co_branded_card",
     "collector_guide", // 游玩的图文指南
     "common_coupon_bar", // 领券条幅 新客专享 省钱卡
-    // "consultancy", // 咨询
+    // "consultancy",
     // "contributor", // 地点贡献
     // "coupon_allowance",
     // "coupon_entrance",
@@ -311,7 +310,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "surround_renthouse",
     "surround_rentoffice",
     "surround_selloffice",
-    "traffic", // 交通出行 地铁站 公交站 停车场
+    // "traffic", // 交通出行 地铁站 公交站 停车场
     "uploadBar",
     "upload_bar", // 上传照片
     "verification" // 商家已入驻
@@ -382,3 +381,5 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     }
   }
 }
+
+$done({ body: JSON.stringify(obj) });
