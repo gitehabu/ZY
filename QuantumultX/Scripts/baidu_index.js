@@ -2,7 +2,6 @@
 // ScriptName  baidu-index
 // 2023-04-05  15:30
 
-
 /* ================ ⭐️⭐️ ================ */
 //百度搜索首页净化
 //Author  @Adblock4limbo, @RuCu6
