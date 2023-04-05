@@ -3,6 +3,7 @@
 // 2023-04-05  15:25
 
 // 注释掉以下  //  /* */
+
 // 足迹
   /*if (obj.data.footPrintV2) {
     delete obj.data.footPrintV2;
