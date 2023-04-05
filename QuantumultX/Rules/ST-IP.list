@@ -1,0 +1,49 @@
+# UpdateTime  2023-03-12 21:55
+### ===== IP ===== ###
+# 针对部分网站显示IP归属地的Quantumult X 分规则, 以下是项目地址 @https://github.com/lwd-temp/anti-ip-attribution
+; 注意!更改IP容易被 风控、封号,不建议使用!
+# 微博
+HOST, api.weibo.cn
+# 抖音;需家宽IP才生效,否则显示 未知
+HOST-SUFFIX, amemv.com
+# 微信
+HOST, mp.weixin.qq.com
+# 贴吧
+HOST, c.tieba.baidu.com
+# 快手
+HOST-SUFFIX, gifshow.com
+HOST-SUFFIX, ksapisrv.com
+# 小红书
+HOST, edith.xiaohongshu.com
+# 知乎
+//HOST, api.zhihu.com
+//IP-CIDR, 103.41.167.0/24
+
+### ===== Speedtest ===== ###
+# 腾讯手机管家测速
+//HOST-SUFFIX, rdt.tfogc.com
+//HOST-SUFFIX, pmir.3g.qq.com
+# 安兔兔测速
+//HOST-SUFFIX, www.qq.com
+//HOST-SUFFIX, dldir1.qq.com
+
+# Speedtest @https://github.com/blackmatrix7/ios_rule_script
+HOST, speed.dler.io
+HOST-SUFFIX, fast.com
+HOST-SUFFIX, ookla.com
+HOST-SUFFIX, cdnst.net
+HOST-SUFFIX, ekahau.com
+HOST-SUFFIX, webtest.net
+HOST-SUFFIX, pingtest.net
+HOST-SUFFIX, speedtest.co
+HOST-SUFFIX, cellmaps.com
+HOST-SUFFIX, ekahau.cloud
+HOST-SUFFIX, speed.dler.io
+HOST-SUFFIX, speedtest.net
+HOST-SUFFIX, ooklaserver.net
+HOST-SUFFIX, ooklaserver.net
+HOST-SUFFIX, test.nextlevel.net
+HOST-SUFFIX, speedtestcustom.com
+HOST-SUFFIX, speed.cloudflare.com
+HOST-KEYWORD, speedtest
+USER-AGENT, SpeedTest*
