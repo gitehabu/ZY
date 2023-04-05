@@ -1,6 +1,6 @@
 // @https://github.com/ddgksf2013/Scripts/blob/master/weibo_json.js
-// Name   Weibo&WeiboIntl
-// 2023-04-05 15:15
+// ScriptName  weibo
+// 2023-04-05  15:30
 
 
 /* ================ ⭐️⭐️ ================ */
