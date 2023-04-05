@@ -1,7 +1,9 @@
 // @https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
-// 2023-04-05 15:15
+// ScriptName  weibo
+// 2023-04-05  15:30
 
 // 注释掉铁粉标识,如下 /* */
+
 // 头像挂件,关注按钮.(评论区铁粉标识)
 /* removeAvatar(item.data); */
 
