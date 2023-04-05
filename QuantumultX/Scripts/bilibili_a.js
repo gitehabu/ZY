@@ -1,6 +1,6 @@
 // @https://github.com/RuCu6/QuanX/blob/main/Scripts/bilibili/bili.js
-// Name   Weibo&WeiboIntl
-// 2023-04-05 15:18
+// ScriptName  bilibili
+// 2023-04-05  15:30
 
 
 /* ================ ⭐️⭐️ ================ */
