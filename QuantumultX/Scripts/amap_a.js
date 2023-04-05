@@ -1,9 +1,8 @@
 // @https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
 // ScriptName  amap
-// 2023-04-06  01:50
+// 2023-04-06  07:50
 
 // 注释掉以下  //  /* */
-
 // 足迹
   /*if (obj.data.footPrintV2) {
     delete obj.data.footPrintV2;
@@ -18,9 +17,10 @@
 // "footprint", // 足迹
 // "contributor", // 地点贡献
 
-// 新增 以下
-// "group_buying",  // 医院口碑推广
-// "group_buying_shelf",  // 医院口碑推广
+// 新增以下
+// 搜索结果 模块详情
+// "group_buying",  // 口碑的医院体检推广
+// "group_buying_shelf",  // 口碑的医院体检推广
 
 /* ================ ⭐️⭐️ ================ */
 // 2023-03-31 15:52
@@ -180,8 +180,8 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   // 搜索结果 模块详情
   const item = [
     // "anchor",
-    "group_buying",  // 医院口碑推广
-    "group_buying_shelf",  // 医院口碑推广
+    "group_buying",  // 口碑的医院体检推广
+    "group_buying_shelf",  // 口碑的医院体检推广
     "adv_compliance_info", // 服务提供方
     "adv_gift",
     // "base_info",
