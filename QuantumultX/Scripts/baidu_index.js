@@ -1,4 +1,4 @@
-// @https://github.com/RuCu6/QuanX/tree/main/Scripts/baidu
+// https://github.com/RuCu6/QuanX/tree/main/Scripts/baidu
 // ScriptName  baidu-index
 // 2023-04-05  15:30
 
