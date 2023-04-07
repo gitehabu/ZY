@@ -1,4 +1,4 @@
-// @https://github.com/RuCu6/QuanX/blob/main/Scripts/amdc.js
+// https://github.com/RuCu6/QuanX/blob/main/Scripts/amdc.js
 // 2023-03-31 17:20
 
 const url = $request.url;
