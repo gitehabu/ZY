@@ -2,24 +2,18 @@
 // hostname = boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net
 // ^https?:\/\/(.+\.)?boxjs\.(com|net) url script-analyze-echo-response https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
 
-/* ================ ⭐️⭐️ ================ */
 const $ = new Env('BoxJs')
-
 // 为 eval 准备的上下文环境
 const $eval_env = {}
-
 $.version = '0.12.9'
 $.versionType = 'beta'
-
 // 发出的请求需要需要 Surge、QuanX 的 rewrite
 $.isNeedRewrite = true
-
 /**
  * ===================================
  * 持久化属性: BoxJs 自有的数据结构
  * ===================================
  */
-
 // 存储`用户偏好`
 $.KEY_usercfgs = 'chavy_boxjs_userCfgs'
 // 存储`应用会话`
