@@ -1,6 +1,6 @@
-// @https://github.com/RuCu6/QuanX/blob/main/Scripts/bilibili/biliProto.js
-// ScriptName  bilibili_proto
-// 2023-04-05  15:25
+// https://github.com/RuCu6/QuanX/blob/main/Scripts/bilibili/biliProto.js
+// ScriptName bilibili_proto
+// 2023-04-05 15:25
 
 /* ================ ⭐️⭐️ ================ */
 
