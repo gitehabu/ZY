@@ -1,4 +1,4 @@
-// @https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
+// https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
 // ScriptName  amap
 // 2023-04-06  07:50
 
