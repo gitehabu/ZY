@@ -1,10 +1,7 @@
-// @https://github.com/RuCu6/QuanX/blob/main/Scripts/xiaohongshu.js
-// ScriptName  xiaohongshu
-// 2023-04-05  15:30
+// https://github.com/RuCu6/QuanX/blob/main/Scripts/xiaohongshu.js
+// ScriptName xiaohongshu
 
-/* ================ ⭐️⭐️ ================ */
 // 2023-03-04 11:10
-
 const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
