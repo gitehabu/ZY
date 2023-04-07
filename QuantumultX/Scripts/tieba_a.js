@@ -1,9 +1,7 @@
 // https://github.com/app2smile/rules/blob/master/js/tieba-json.js
-// ScriptName  tieba
+// ScriptName tieba
 
-/* ================ ⭐️⭐️ ================ */
 // 2023-02-21
-
 const url = $request.url;
 const method = $request.method;
 const postMethod = "POST";
