@@ -1,4 +1,4 @@
-// @https://github.com/RuCu6/QuanX/blob/main/Scripts/bilibili/bili.js
+// https://github.com/RuCu6/QuanX/blob/main/Scripts/bilibili/bili.js
 // ScriptName  bilibili
 // 2023-04-05  15:30
 
