@@ -1,8 +1,8 @@
-// @https://github.com/app2smile/rules/blob/master/js/tieba-json.js
+// https://github.com/app2smile/rules/blob/master/js/tieba-json.js
 // ScriptName  tieba
-// 2023-04-05  15:30
 
 /* ================ ⭐️⭐️ ================ */
+// 2023-02-21
 
 const url = $request.url;
 const method = $request.method;
