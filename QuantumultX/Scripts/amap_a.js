@@ -1,6 +1,6 @@
 // https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
-// ScriptName  amap
-// 2023-04-06  07:50
+// ScriptName amap
+// 2023-04-06 07:50
 
 // 注释掉以下  //  /* */
 // 足迹
