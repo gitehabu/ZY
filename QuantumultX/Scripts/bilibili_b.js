@@ -1,4 +1,4 @@
-// @https://github.com/ddgksf2013/Scripts/blob/master/bilibili_json.js
+// https://github.com/ddgksf2013/Scripts/blob/master/bilibili_json.js
 // ScriptName  bilibili
 // 2023-04-05  15:30
 
