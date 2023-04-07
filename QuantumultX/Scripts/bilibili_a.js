@@ -1,10 +1,7 @@
 // https://github.com/RuCu6/QuanX/blob/main/Scripts/bilibili/bili.js
 // ScriptName bilibili
-// 2023-04-05 15:30
 
-/* ================ ⭐️⭐️ ================ */
 // 2023-04-01 08:55
-
 const url = $request.url;
 let obj = JSON.parse($response.body);
 
