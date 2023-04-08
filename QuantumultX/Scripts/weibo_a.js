@@ -1,10 +1,11 @@
 // https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
 // ScriptName weibo
-// 2023-04-05 15:30
+// 2023-04-08 20:00
 
-// 注释掉铁粉标识,如下 /* */
+// 注释掉铁粉标识,如下  /* */
 // 头像挂件,关注按钮.(评论区铁粉标识)
 /* removeAvatar(item.data); */
+// removeAvatar(item.data);
 
 // 2023-04-03 09:25
 const url = $request.url;
@@ -145,7 +146,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             // 微博伪装评论
             if (item.data.user) {
               // 头像挂件,关注按钮
-             /* removeAvatar(item.data); */
+             // removeAvatar(item.data);
               if (
                 item.data.user.name === "超话社区" ||
                 item.data.user.name === "微博视频"
@@ -347,10 +348,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                 i.itemId === "100505_-_like" || // 赞/收藏
                 i.itemId === "100505_-_watchhistory" || // 浏览记录
                 i.itemId === "100505_-_draft" // 草稿箱
-             i.itemId === "100505_-_pay" || // 我的钱包
-             i.itemId === "100505_-_ordercenter" || // 我的订单
-             i.itemId === "100505_-_productcenter" || // 创作中心
-             i.itemId === "100505_-_promote" || // 广告中心
+              // i.itemId === "100505_-_pay" || // 我的钱包
+              // i.itemId === "100505_-_ordercenter" || // 我的订单
+              // i.itemId === "100505_-_productcenter" || // 创作中心
+              // i.itemId === "100505_-_promote" || // 广告中心
             );
           }
           newItems.push(item);
