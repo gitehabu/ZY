@@ -1,6 +1,6 @@
 // https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
 // ScriptName amap
-
+// 2023-03-31 15:52
 // 注释掉以下  //  /* */
 // 足迹
   /*if (obj.data.footPrintV2) {
@@ -21,7 +21,6 @@
 // "group_buying",  // 口碑的医院体检推广
 // "group_buying_shelf",  // 口碑的医院体检推广
 
-// 2023-03-31 15:52
 const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
