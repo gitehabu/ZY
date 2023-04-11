@@ -1,6 +1,6 @@
 // @https://github.com/RuCu6/QuanX/blob/main/Scripts/zhihu.js
 // ScriptName zhihu
-// 2023-04-07 18:15
+// 2023-04-11 12:00
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -68,19 +68,19 @@ if (url.includes("/appview/v3/zhmore")) {
     }
   } else if (url.includes("/api/v4/answers")) {
     if (obj.paging) {
-      obj.paging = {};
+      delete obj.paging;
     }
     if (obj.data) {
-      obj.data = {};
+      delete obj.data;
     }
   } else if (url.includes("/api/v4/articles")) {
     if (obj.ad_info) {
-      obj.ad_info = {};
+      delete obj.ad_info;
     }
   } else if (url.includes("/commercial_api/app_float_layer")) {
     // 悬浮图标
     if ("feed_egg" in obj) {
-      obj = {};
+      delete obj;
     }
   } else if (url.includes("/moments_v3")) {
     if (obj.data) {
@@ -118,10 +118,6 @@ if (url.includes("/appview/v3/zhmore")) {
           return false;
         }
       });
-    }
-  } else if (url.includes("/root/window")) {
-    if (obj.guide) {
-      obj.guide = {};
     }
   } else if (url.includes("/topstory/recommend")) {
     // 推荐信息流
@@ -183,10 +179,10 @@ if (url.includes("/appview/v3/zhmore")) {
   } else if (url.includes("/v4/questions") || url.includes("/questions")) {
     // 问题回答列表广告
     if (obj.data.ad_info) {
-      obj.data.ad_info = {};
+      delete obj.data.ad_info;
     }
     if (obj.ad_info) {
-      obj.ad_info = {};
+      delete obj.ad_info;
     }
   }
   $done({ body: JSON.stringify(obj) });
