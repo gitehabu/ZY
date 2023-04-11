@@ -1,6 +1,7 @@
 // https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
 // ScriptName amap
 // 2023-03-31 15:52
+
 // 注释掉以下  //  /* */
 // 足迹
   /*if (obj.data.footPrintV2) {
