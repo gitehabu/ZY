@@ -1,15 +1,18 @@
 // https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
 // ScriptName weibo
-// 2023-04-11 09:15
+// 2023-04-12 21:25
 
 // 注释掉铁粉标识,如下  /* */
 // 头像挂件,关注按钮.(评论区铁粉标识)
 /* removeAvatar(item.data); */
 // removeAvatar(item.data);
 
+
+
 const url = $request.url;
 if (!$response.body) $done({});
 let body = $response.body;
+
 // 微博详情页菜单配置
 const itemMenusConfig = {
   creatortypeask: false, // 转发任务
@@ -619,6 +622,19 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.channelInfo.channel_list = obj.channelInfo.channel_list.filter(
         (t) => t.title !== "广场"
       );
+    }
+  } else if (
+    url.includes("/v1/ad/preload") ||
+    url.includes("/v2\/ad\/rea")
+  ) {
+    // 开屏广告
+    if (obj.ads) {
+      for (let item of obj.ads) {
+        item.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+        item.daily_display_cnt = 50; // total_display_cnt: 50
+        item.display_duration = 0;
+        item.start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+      }
     }
   } else if (url.includes("/wbapplua/wbpullad.lua")) {
     // 开屏广告
