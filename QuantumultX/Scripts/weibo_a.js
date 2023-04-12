@@ -8,7 +8,6 @@
 // removeAvatar(item.data);
 
 
-
 const url = $request.url;
 if (!$response.body) $done({});
 let body = $response.body;
