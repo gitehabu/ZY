@@ -1,11 +1,12 @@
 // https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
 // ScriptName weibo
-// 2023-04-12 21:25
+// 2023-04-13 08:50
 
-// 注释掉铁粉标识,如下  /* */
+// 注释掉铁粉标识,如下  //  /* */
 // 头像挂件,关注按钮.(评论区铁粉标识)
 /* removeAvatar(item.data); */
 // removeAvatar(item.data);
+
 
 
 const url = $request.url;
@@ -622,10 +623,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         (t) => t.title !== "广场"
       );
     }
-  } else if (
-    url.includes("/v1/ad/preload") ||
-    url.includes("/v2\/ad\/rea")
-  ) {
+  } else if (url.includes("/v1/ad/preload")) {
     // 开屏广告
     if (obj.ads) {
       for (let item of obj.ads) {
@@ -634,13 +632,21 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         item.display_duration = 0;
         item.start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
       }
+      if (obj.ads.creatives) {
+        for (let item of obj.ads.creatives) {
+          item.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+          item.daily_display_cnt = 50; // total_display_cnt: 50
+          item.display_duration = 0;
+          item.start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+        }
+      }
     }
   } else if (url.includes("/wbapplua/wbpullad.lua")) {
     // 开屏广告
     if (obj.cached_ad.ads) {
       for (let item of obj.cached_ad.ads) {
         item.start_date = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
-        item.show_count = 0;
+        item.show_count = 50;
         item.duration = 0; // 60 * 60 * 24 * 365 = 31536000
         item.end_date = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
       }
@@ -724,3 +730,4 @@ function removeFeedAd(item) {
     delete item.comment_summary;
   }
 }
+
