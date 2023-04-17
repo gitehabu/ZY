@@ -6,9 +6,6 @@
 // 头像挂件,关注按钮.(评论区铁粉标识)
 /* removeAvatar(item.data); */
 // removeAvatar(item.data);
- /* if (item?.items) {
-          delete item.items;
-        } */
 
 
 const url = $request.url;
@@ -535,9 +532,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj.items) {
       let newItems = [];
       for (let item of obj.items) {
-       /* if (item?.items) {
+        if (item?.items) {
           delete item.items;
-        } */
+        }
         if (item.category === "feed") {
           if (item.data) {
             // 头像挂件,关注按钮
@@ -550,7 +547,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
       }
       obj.items = newItems;
-    } 
+    }
   } else if (url.includes("/2/statuses/extend")) {
     // 微博详情页
     if (obj?.trend?.extra_struct?.extBtnInfo?.btn_picurl?.includes("ad")) {
@@ -614,7 +611,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj.statuses) {
       obj.statuses = obj.statuses.filter((m) => !(m.mblogtypename === "广告"));
     }
- /* } else if (url.includes("/2/!/huati/discovery_home_bottom_channels")) {
+  } else if (url.includes("/2/!/huati/discovery_home_bottom_channels")) {
     // 超话左上角,右上角图标
     if (obj.button_configs) {
       delete obj.button_configs;
@@ -623,8 +620,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj.channelInfo.channel_list) {
       obj.channelInfo.channel_list = obj.channelInfo.channel_list.filter(
         (t) => t.title !== "广场"
-      ); 
-    } */
+      );
+    }
   } else if (url.includes("/v1/ad/preload")) {
     // 开屏广告
     if (obj.ads) {
@@ -732,4 +729,3 @@ function removeFeedAd(item) {
     delete item.comment_summary;
   }
 }
-
