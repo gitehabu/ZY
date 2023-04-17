@@ -611,13 +611,13 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj.statuses) {
       obj.statuses = obj.statuses.filter((m) => !(m.mblogtypename === "广告"));
     }
-  } else if (url.includes("/2/!/huati/discovery_home_bottom_channels")) {
+ /* } else if (url.includes("/2/!/huati/discovery_home_bottom_channels")) {
     // 超话左上角,右上角图标
     if (obj.button_configs) {
       delete obj.button_configs;
     }
     // 广场页
-   /* if (obj.channelInfo.channel_list) {
+    if (obj.channelInfo.channel_list) {
       obj.channelInfo.channel_list = obj.channelInfo.channel_list.filter(
         (t) => t.title !== "广场"
       ); 
