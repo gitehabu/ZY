@@ -6,6 +6,9 @@
 // 头像挂件,关注按钮.(评论区铁粉标识)
 /* removeAvatar(item.data); */
 // removeAvatar(item.data);
+ /* if (item?.items) {
+          delete item.items;
+        } */
 
 
 const url = $request.url;
@@ -527,14 +530,14 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       }
       obj.items = newItems;
     }
- /* } else if (url.includes("/2/statuses/container_timeline_topic")) {
+  } else if (url.includes("/2/statuses/container_timeline_topic")) {
     // 超话信息流
     if (obj.items) {
       let newItems = [];
       for (let item of obj.items) {
-        if (item?.items) {
+       /* if (item?.items) {
           delete item.items;
-        }
+        } */
         if (item.category === "feed") {
           if (item.data) {
             // 头像挂件,关注按钮
@@ -547,7 +550,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
       }
       obj.items = newItems;
-    } */
+    } 
   } else if (url.includes("/2/statuses/extend")) {
     // 微博详情页
     if (obj?.trend?.extra_struct?.extBtnInfo?.btn_picurl?.includes("ad")) {
