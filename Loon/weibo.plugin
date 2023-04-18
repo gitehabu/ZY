@@ -1,6 +1,12 @@
-# Name   weibo&weibointl
-# Author @zmqcherish, @ddgksf2013, @RuCu6
-# UpdateTime 2023-04-17 20:15
+#!name = weibo&weibointl
+#!desc = 微博净化
+#!openUrl = 
+#!author = Author @zmqcherish, @ddgksf2013, @RuCu6
+#!homepage = https://raw.githubusercontent.com/ZY714IU/ZY/main/Loon/weibo.plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
+
+# UpdateTime 2023-04-18 16:45
+
 
 [Rule]
 # 微博_去开屏
