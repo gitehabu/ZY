@@ -16,6 +16,7 @@ domain, sdkaction.biz.weibo.com, reject
 domain, adstrategy.biz.weibo.com, reject
 domain, sdkmonitor.biz.weibo.com, reject
 
+
 [Rewrite]
 # 开屏广告 ad\/realtime
 ^https?:\/\/boot*.*.weibo\.c(n|om)\/v\d\/ad\/realtime url reject-dict
