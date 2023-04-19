@@ -59,15 +59,15 @@ domain, sdkmonitor.biz.weibo.com, reject
 # https://github.com/RuCu6/QuanX/blob/main/Rewrites/Cube/weibo.snippet
 
 # 开屏广告 bootpreload.uve.weibo.com
-http-request ^https?:\/\/boot*.*.weibo\.c(n|om)\/v\d\/ad\/preload$ url script-response-body https://raw.githubusercontent.com/ZY714IU/ZY/main/QuantumultX/Scripts/weibo_a.js,requires-body=true,timeout=10,tag=开屏广告
+http-request ^https?:\/\/boot*.*.weibo\.c(n|om)\/v\d\/ad\/preload$ url script-response-body https://raw.githubusercontent.com/ZY714IU/ZY/main/QuantumultX/Scripts/weibo_a.js,requires-body=true,timeout=10,tag=weibo
 
-http-request ^https?:\/\/(sdk|wb)app\.uve\.weibo\.c(n|om)\/(interface\/sdk\/sdkad\.php|wbapplua\/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/ZY714IU/ZY/main/QuantumultX/Scripts/weibo_a.js, requires-body = true, timeout=10, tag = 开屏广告
+http-request ^https?:\/\/(sdk|wb)app\.uve\.weibo\.c(n|om)\/(interface\/sdk\/sdkad\.php|wbapplua\/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/ZY714IU/ZY/main/QuantumultX/Scripts/weibo_a.js, requires-body = true, timeout=10, tag = weibo
 
 # 首页_关注页信息流 container_timeline\?taskType
 # 首页_关注页信息流 container_timeline(_unread|_hot)
 # 首页_推荐页信息流 unread_hot_timeline
 # 个人主页信息流 profile\/container_timeline\?taskType
-http-request ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(statuses|profile)\/(container_timeline\?taskType|container_timeline(_unread|_hot)|unread_hot_timeline) url script-response-body https://raw.githubusercontent.com/ZY714IU/ZY/main/QuantumultX/Scripts/weibo_a.js, requires-body = true, timeout=10, tag = 首页信息流_关注页、推荐页、个人主页
+http-request ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(statuses|profile)\/(container_timeline\?taskType|container_timeline(_unread|_hot)|unread_hot_timeline) url script-response-body https://raw.githubusercontent.com/ZY714IU/ZY/main/QuantumultX/Scripts/weibo_a.js, requires-body = true, timeout=10, tag = weibo
 
 # 发现页 search\/finder
 # 发现页_热门微博信息流 search\/container_timeline
