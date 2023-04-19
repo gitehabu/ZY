@@ -1,8 +1,9 @@
-#!name=
-#!desc=
-#!homepage=
-#!author=
-#!icon=
+#!name = 微博去广告
+#!desc = 过滤微博广告及去除各部分推广模块
+#!openUrl = 
+#!author = RuCu6 zmqcherish Cuttlefish
+#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/Weibo.png
 
 
 
