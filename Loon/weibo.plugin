@@ -53,6 +53,7 @@ domain, sdkmonitor.biz.weibo.com, reject
 # 侧边栏 ug\/checkin
 # ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ug\/checkin\/list url reject-dict
 
+# 微博轻享版(国际版)
 # 热搜? weibointl==portal\.php\?a=hot_search_users
 # 趋势页_热门视频 m?api==cardlist\?v_f=\d
 # 热推荐 m?api==ad\/weibointl
@@ -97,7 +98,7 @@ http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(statuses\/(extend|show)|co
 
 # 屏蔽_超话发现页 .\/huati\/discovery_home_bottom_channels|
 # 超话_信息流 container_timeline_topic
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(.\/huati\/discovery_home_bottom_channels|statuses/container_timeline_topic) script-path=https://raw.githubusercontent.com/ZY714IU/ZY/main/QuantumultX/Scripts/weibo_a.js, requires-body=true, timeout=10, tag=屏蔽_超话发现页，超话信息流
+# http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(.\/huati\/discovery_home_bottom_channels|statuses/container_timeline_topic) script-path=https://raw.githubusercontent.com/ZY714IU/ZY/main/QuantumultX/Scripts/weibo_a.js, requires-body=true, timeout=10, tag=屏蔽_超话发现页，超话信息流
 
 # 跳过重定向页面以直接访问
 # http-response ^https?:\/\/(sinaurl|t)\.c(n|om)\/ script-path=https://raw.githubusercontent.com/ZY714IU/ZY/main/QuantumultX/Scripts/noRedirect.js, requires-body=false, timeout=10, tag=noRedirect
