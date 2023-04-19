@@ -48,17 +48,17 @@ domain, sdkmonitor.biz.weibo.com, reject
 # 文章_为你推荐更多精彩 weibo===recommend
 ^https?:\/\/(m?api\.weibo|weibo)\.c(n|om)\/(\d\/.\/live\/media_homelist|.\/sug\/list|\d\/search\/container_discover|ttarticle\/\w\/\w\/aj\/(reward|uvead|recommend)) url reject-dict
 
-# 消息页_未阅读数字;群聊红点
-^https?:\/\/m?api.weibo.c(n|om)\/\d\/direct_messages url response-body "unread_count":\d+ response-body "unread_count":0
+# 消息页_未阅读数字;群聊红点(Quantumult X专属)
+# ^https?:\/\/m?api.weibo.c(n|om)\/\d\/direct_messages url response-body "unread_count":\d+ response-body "unread_count":0
 
 # 侧边栏 ug\/checkin
 # ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ug\/checkin\/list url reject-dict
 
 # 微博轻享版(国际版)
 # 热搜? weibointl==portal\.php\?a=hot_search_users
-# 趋势页_热门视频 m?api==cardlist\?v_f=\d
+# 趋势页_热门视频 m?api==cardlist\?v_f=\d(已删掉)
 # 热推荐 m?api==ad\/weibointl
-^https?:\/\/(weibointl\.api|m?api)\.weibo\.c(n|om)\/(portal\.php\?a=hot_search_users|\d\/(cardlist\?v_f=\d|ad\/weibointl\?)) url reject-dict
+^https?:\/\/(weibointl\.api|m?api)\.weibo\.c(n|om)\/(portal\.php\?a=hot_search_users|\d\/ad\/weibointl\?) url reject-dict
 
 
 [Script]
