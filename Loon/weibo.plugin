@@ -117,7 +117,7 @@ http-request ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(statuses\/(extend|show)|con
 # 超话_信息流 statuses\/container_timeline_topic
 # 未登陆状态下首页信息流 \w{5}\/statuses_unread_hot_timeline|\w{5}\/timeline
 # 发现页搜索框热词 \w{5}\/cardlist
-http-request ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/(profile\/me\?|statuses\/container_timeline_topic|\w{5}\/(statuses_unread_hot_timeline|timeline|cardlist)) script-path = https://raw.githubusercontent.com/ZY714IU/ZY/main/QuantumultX/Scripts/weibo_b.js, requires-body = true, timeout = 10, tag = 我的页面，超话_信息流
+http-request ^https?:\/\/api\.weibo\.c(n|om)\/\d\/(profile\/me\?|statuses\/container_timeline_topic|\w{5}\/(statuses_unread_hot_timeline|timeline|cardlist)) script-path = https://raw.githubusercontent.com/ZY714IU/ZY/main/QuantumultX/Scripts/weibo_b.js, requires-body = true, tag = 我的页面，超话_信息流
 
 # 发现页 search\/finder
 # 发现页_热门微博信息流 search\/container_timeline
