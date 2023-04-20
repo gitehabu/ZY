@@ -1,16 +1,14 @@
 // https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
 // ScriptName amap
-// 2023-03-31 15:52
+// 2023-04-20 21:55
 
-// 注释掉以下  //  /* */
+
+// 注释掉以下 //  /* */
 // 足迹
   /*if (obj.data.footPrintV2) {
     delete obj.data.footPrintV2;
   }*/
-// 成就勋章 lv1见习达人
-  /*if (obj.data.memberInfo) {
-    delete obj.data.memberInfo;
-  }*/
+
 // "reviews", // 用户评价
 // "checkIn",
 // "check_in", // 足迹打卡
@@ -19,8 +17,9 @@
 
 // 新增以下
 // 搜索结果 模块详情
-// "group_buying",  // 口碑的医院体检推广
-// "group_buying_shelf",  // 口碑的医院体检推广
+// "group_buying", // 口碑的医院体检推广
+// "group_buying_shelf", // 口碑的医院体检推广
+
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -136,30 +135,87 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   //   delete obj.data.footPrintV2;
   // }
   // 成就勋章 lv1见习达人
- /* if (obj.data.memberInfo) {
+  if (obj.data.memberInfo) {
     delete obj.data.memberInfo;
-  } */
+  }
 } else if (url.includes("/shield/frogserver/aocs")) {
   // 整体图层
   const item = [
+    "Naviendpage_Searchwords",
+    "SplashScreenControl",
+    "TipsTaxiButton",
+    "TrainOrderBanner",
+    "_testmark_info",
+    "_user_profile_",
+    "air_card",
+    "amapCoin",
+    "aos_feedback",
+    "apple_location_log_collect",
     "collect",
-  // "footprint", // 足迹
+    "deviceml_force_recommend",
+    "deviceml_update_apk_conf",
+    // "footprint", // 足迹
+    "gd_code_cover",
     "gd_notch_logo",
     "his_input_tip",
     "home_business_position_config", // 首页右上角动图
+    "homepage_resource_config",
     "hotel_activity",
+    "hotel_fillin_opt",
     "hotel_loop",
+    "hotel_portal",
     "hotel_tipsicon",
     "icon_show",
+    "info_env_setting",
+    "ip_square",
+    "ip_square_share",
     "isNewSearchMapCard", // 可能是足迹
+    "isPoiBubbleDisplay",
+    "lab_screenrecording",
+    "landing_page_info",
+    "list_action_drawer",
+    "listguide",
+    "map_environment_air",
+    "map_weather_switch",
+    "maplayers", // 赏花地图
+    "message_tab",
+    "navi_end", // 导航结束页面
+    "nearby",
+    "nearby_business_popup",
+    "nearby_map_entry_guide",
+    "nearby_map_pull_down_guide",
+    "nore_rec",
     "operation_layer", // 首页右上角图层
     "photo_with_location",
+    "poi_rec",
+    "preword",
     "profileHeaderPic",
     "profiletTopBtn",
+    "recommend_api",
+    "redesign_user",
+    "routeresult_banner",
+    "search_homepage",
+    "search_keyword",
+    "search_moni",
+    "search_perf",
+    "search_poi_recommend",
+    "search_service_adcode",
+    "search_word",
+    "small_biz_fun",
+    "small_biz_news",
     "splashscreen",
+    "splashview_config",
+    "sur_bar",
+    "taxi_activity",
     "testflight_adiu",
+    "tf_remind",
+    "third_party_places",
+    "tips_bar_black_list",
+    "tips_hook",
+    "trackupload",
+    "user_insight", // 您对本次导航满意吗
     "vip",
-    "_user_profile_"
+    "weather_restrict_config"
   ];
   for (let i of item) {
     if (obj.data?.[i]) {
@@ -177,8 +233,8 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   // 搜索结果 模块详情
   const item = [
     // "anchor",
-    "group_buying",  // 口碑的医院体检推广
-    "group_buying_shelf",  // 口碑的医院体检推广
+    "group_buying", // 口碑的医院体检推广
+    "group_buying_shelf", // 口碑的医院体检推广
     "adv_compliance_info", // 服务提供方
     "adv_gift",
     // "base_info",
@@ -193,6 +249,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "co_branded_card",
     "collector_guide", // 游玩的图文指南
     "common_coupon_bar", // 领券条幅 新客专享 省钱卡
+    "comprehensiveEditEntrance", // 编辑地点信息
     // "consultancy",
     // "contributor", // 地点贡献
     // "coupon_allowance",
@@ -344,6 +401,18 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     if (list?.bottom?.bottombar_button?.hotel) {
       delete list.bottom.bottombar_button.hotel;
     }
+  }
+} else if (url.includes("/shield/search_poi/sug")) {
+  if (obj?.tip_list) {
+    let newList = [];
+    for (let list of obj.tip_list) {
+      if (list?.tip?.is_user_input === "1") {
+        newList.push(list);
+      } else {
+        continue;
+      }
+    }
+    obj.tip_list = newList;
   }
 } else if (url.includes("/shield/search_poi/tips_operation_location")) {
   // 搜索页面 底部结果上方窄横幅
