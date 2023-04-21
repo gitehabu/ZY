@@ -1,6 +1,6 @@
 // https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
 // ScriptName weibo
-// 2023-04-13 08:50
+// 2023-04-21 14:25
 
 // 注释掉铁粉标识,如下  //  /* */
 // 头像挂件,关注按钮.(评论区铁粉标识)
@@ -587,8 +587,12 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   } else if (url.includes("/2/statuses/show")) {
     removeFeedAd(obj);
     // 循环引用中的商品橱窗
-    if (obj.text) {
+    if (obj?.text) {
       removeFeedAd(obj.text);
+    }
+    // 赞赏信息
+    if (obj?.reward_info) {
+      delete obj.reward_info;
     }
   } else if (url.includes("/2/statuses/unread_hot_timeline")) {
     // 首页推荐tab信息流
