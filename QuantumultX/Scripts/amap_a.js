@@ -402,7 +402,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
       delete list.bottom.bottombar_button.hotel;
     }
   }
-} else if (url.includes("/shield/search/sug")) {
+} else if (url.includes("/shield/search_poi/sug")) {
   if (obj?.tip_list) {
     let newList = [];
     for (let list of obj.tip_list) {
