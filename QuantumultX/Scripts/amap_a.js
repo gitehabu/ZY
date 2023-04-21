@@ -1,13 +1,9 @@
 // https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
 // ScriptName amap
-// 2023-04-20 21:55
+// 2023-04-21 10:00
 
 
 // 注释掉以下 //  /* */
-// 足迹
-  /*if (obj.data.footPrintV2) {
-    delete obj.data.footPrintV2;
-  }*/
 
 // "reviews", // 用户评价
 // "checkIn",
@@ -57,7 +53,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   }
 } else if (url.includes("/mapapi/poi/infolite")) {
   // 搜索结果 列表详情
-  if (obj.data.district) {
+  if (obj.data?.district?.poi_list) {
     let poi = obj.data.district.poi_list[0];
     // 订票横幅 订票用高德 出行享低价
     if (poi?.transportation) {
@@ -67,7 +63,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     if (poi?.feed_rec_tab) {
       delete poi.feed_rec_tab;
     }
-  } else if (obj.data.list_data) {
+  } else if (obj.data?.list_data) {
     let list = obj.data.list_data.content[0];
     if (list?.bottom?.taxi_button) {
       list.bottom.taxi_button = 0;
@@ -222,6 +218,10 @@ if (url.includes("/faas/amap-navigation/main-page")) {
       obj.data[i] = { status: 1, version: "", value: "" };
     }
   }
+} else if (url.includes("/shield/search/common/coupon/info")) {
+  if (obj.data) {
+    obj.data = {};
+  }
 } else if (url.includes("/shield/search/nearbyrec_smart")) {
   // 附近页面
   if (obj.data.modules) {
@@ -251,7 +251,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "common_coupon_bar", // 领券条幅 新客专享 省钱卡
     "comprehensiveEditEntrance", // 编辑地点信息
     // "consultancy",
-    // "contributor", // 地点贡献
+    "contributor", // 地点贡献
     // "coupon_allowance",
     // "coupon_entrance",
     "cpt_service_shop", //买卖二手房
@@ -401,18 +401,34 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     if (list?.bottom?.bottombar_button?.hotel) {
       delete list.bottom.bottombar_button.hotel;
     }
+    // 搜索页 顶部商业卡片
+    if (
+      list?.card?.card_id === "SearchCardBrand" &&
+      list?.item_type === "brandAdCard"
+    ) {
+      delete list.card;
+    }
+    // 搜索页 顶部促销卡片
+    if (
+      list?.card?.card_id === "NearbyGroupBuy" &&
+      list?.item_type === "toplist"
+    ) {
+      delete list.card;
+    }
   }
 } else if (url.includes("/shield/search_poi/sug")) {
   if (obj?.tip_list) {
     let newList = [];
-    for (let list of obj.tip_list) {
-      if (list?.tip?.is_user_input === "1") {
-        newList.push(list);
-      } else {
-        continue;
+    if (obj?.tip_list?.length > 0) {
+      for (let item of obj.tip_list) {
+        if (item?.tip?.is_user_input === "1") {
+          newList.push(item);
+        } else {
+          continue;
+        }
       }
+      obj.tip_list = newList;
     }
-    obj.tip_list = newList;
   }
 } else if (url.includes("/shield/search_poi/tips_operation_location")) {
   // 搜索页面 底部结果上方窄横幅
