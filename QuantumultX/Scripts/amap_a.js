@@ -13,8 +13,8 @@
 
 // 新增以下
 // 搜索结果 模块详情
-// "group_buying", // 口碑的医院体检推广
-// "group_buying_shelf", // 口碑的医院体检推广
+/* "group_buying", // 口碑的医院体检推广
+   "group_buying_shelf", // 口碑的医院体检推广 */
 
 
 const url = $request.url;
