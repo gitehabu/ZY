@@ -1,6 +1,6 @@
 // https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
 // ScriptName amap
-// 2023-04-21 10:00
+// 2023-04-21 22:55
 
 
 // 注释掉以下 //  /* */
@@ -167,6 +167,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "ip_square_share",
     "isNewSearchMapCard", // 可能是足迹
     "isPoiBubbleDisplay",
+    "lab_beta",
     "lab_screenrecording",
     "landing_page_info",
     "list_action_drawer",
@@ -188,6 +189,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "profileHeaderPic",
     "profiletTopBtn",
     "recommend_api",
+    "recommend_key",
     "redesign_user",
     "routeresult_banner",
     "search_homepage",
@@ -198,6 +200,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "search_service_adcode",
     "search_word",
     "small_biz_fun",
+    "small_biz_index",
     "small_biz_news",
     "splashscreen",
     "splashview_config",
