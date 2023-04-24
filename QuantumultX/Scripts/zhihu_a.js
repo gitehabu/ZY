@@ -1,6 +1,9 @@
-// @https://github.com/RuCu6/QuanX/blob/main/Scripts/zhihu.js
-// ScriptName zhihu
-// 2023-04-11 12:00
+/********
+https://github.com/RuCu6/QuanX/blob/main/Scripts/zhihu.js
+ScriptName zhihu
+2023-04-11 12:00
+********/
+
 
 if (!$response.body) $done({});
 const url = $request.url;
