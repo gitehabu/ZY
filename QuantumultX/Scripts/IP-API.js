@@ -3,10 +3,13 @@ Geo Location Checker 本地Geo检查器
 https://github.com/I-am-R-E/Functional-Store-Hub/tree/Master/GeoLocationChecker/QuantumultX
 台湾地区旗帜替换为🇨🇳版
 台湾地区旗帜显示为🇹🇼版
+
+[general]
+geo_location_checker = http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/ZY714IU/ZY/main/QuantumultX/Scripts/IP-API.js
 */
 
 
-/*=================================*/
+/*=============== 分割线 ===============*/
 /*
 //台湾地区旗帜替换为🇨🇳版
 
@@ -25,7 +28,7 @@ if($response['statusCode']!=0xc8){$done(null);}function _0x2a712a(_0x127fe4){var
 */
 
 
-/*=================================*/
+/*=============== 分割线 ===============*/
 //台湾地区旗帜显示为🇹🇼版
 
 //中文
