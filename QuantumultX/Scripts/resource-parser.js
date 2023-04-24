@@ -1,7 +1,3 @@
-/*
-https://github.com/KOP-XIAO/QuantumultX/blob/master/Scripts/resource-parser.js
-*/
-
 /** 
 ☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2023-04-18 10:50⟧
 ----------------------------------------------------------
