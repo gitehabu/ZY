@@ -1,6 +1,8 @@
-// https://github.com/ddgksf2013/Scripts/blob/master/weibo_json.js
-// ScriptName weibo&weiboIntl
-// 2022-04-16
+/********
+https://github.com/ddgksf2013/Scripts/blob/master/weibo_json.js
+ScriptName weibo&weiboIntl
+2022-04-16
+********/
 
 
 const version = 'V2.0.111';
