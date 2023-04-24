@@ -1,6 +1,6 @@
 // https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
 // ScriptName amap
-// 2023-04-22 13:00
+// 2023-04-22 15:20
 
 
 // 注释掉以下 //  /* */
@@ -165,7 +165,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "info_env_setting",
     "ip_square",
     "ip_square_share",
-    "isNewSearchMapCard", // 可能是足迹
+    //"isNewSearchMapCard", // 可能是足迹
     "isPoiBubbleDisplay",
     "lab_beta",
     "lab_screenrecording",
