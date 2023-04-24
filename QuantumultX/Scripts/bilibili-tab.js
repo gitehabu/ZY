@@ -1,6 +1,12 @@
-/*
-README: https://github.com/BiliUniverse/Enhanced
-*/
+/*******
+https://github.com/BiliUniverse/Enhanced/wiki
+boxjs https://github.com/BiliUniverse/BoxJs/raw/main/BiliBili.boxjs.json
+ScriptName 标签页处理 resource.show.tab.v2
+^https?:\/\/app\.bili(bil|ap)i\.(com|net)\/x\/resource\/show\/tab\/v\d(\?.+)?$ url script-response-body https://github.com/ZY714IU/ZY/raw/main/QuantumultX/Scripts/bilibili-tab.js
+2023-04-25 01:20
+********/
+
+
 const $ = new Env("📺 BiliBili:Enhanced v0.1.5(5) response");
 const URL = new URLs();
 const DataBase = {
