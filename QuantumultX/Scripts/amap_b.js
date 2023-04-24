@@ -1,6 +1,9 @@
-// https://github.com/ddgksf2013/Scripts/blob/master/amap.js
-// ScriptName amap
-// 2022-02-16
+/*
+https://github.com/ddgksf2013/Scripts/blob/master/amap.js
+ScriptName amap
+2022-02-16
+*/
+
 
 const version = 'V2.0.111';
 const mainConfig = {
