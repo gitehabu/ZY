@@ -1,11 +1,12 @@
-// https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
-// ScriptName weibo
-// 2023-04-23 19:55
+/********
+https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
+ScriptName weibo
+2023-04-23 19:55
 
-// 注释掉铁粉标识,如下  //  /* */
-// 头像挂件,关注按钮.(评论区铁粉标识)
-/* removeAvatar(item.data); */
-// removeAvatar(item.data);
+注释掉铁粉标识,如下
+头像挂件,关注按钮.(评论区铁粉标识)
+removeAvatar(item.data);
+********/
 
 
 const url = $request.url;
