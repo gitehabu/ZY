@@ -1,3 +1,11 @@
+/*******
+https://github.com/BiliUniverse/Enhanced/tree/main/database
+ScriptName bilibili-boxjs 订阅文件
+请在 boxjs 订阅添加使用
+2023-04-25 01:33
+*******/
+
+
 {
 	"id": "BiliUniverse.BiliBili.sub",
 	"name": "🪐 BiliUniverse: 📺 BiliBili",
