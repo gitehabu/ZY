@@ -1,4 +1,4 @@
-/*
+/********
 https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
 ScriptName amap
 2023-04-22 15:25
@@ -17,7 +17,7 @@ ScriptName amap
 搜索结果 模块详情
 "group_buying", // 口碑的医院体检推广
 "group_buying_shelf", // 口碑的医院体检推广
-*/
+********/
 
 
 const url = $request.url;
