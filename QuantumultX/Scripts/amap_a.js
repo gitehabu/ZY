@@ -1,20 +1,23 @@
-// https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
-// ScriptName amap
-// 2023-04-22 15:20
+/*
+https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
+ScriptName amap
+2023-04-22 15:25
 
 
-// 注释掉以下 //  /* */
+注释掉以下
 
-// "reviews", // 用户评价
-// "checkIn",
-// "check_in", // 足迹打卡
-// "footprint", // 足迹
-// "contributor", // 地点贡献
+"reviews", // 用户评价
+"checkIn",
+"check_in", // 足迹打卡
+"footprint", // 足迹
+"isNewSearchMapCard", // 可能是足迹
+"contributor", // 地点贡献
 
-// 新增以下
-// 搜索结果 模块详情
-/* "group_buying", // 口碑的医院体检推广
-   "group_buying_shelf", // 口碑的医院体检推广 */
+新增以下
+搜索结果 模块详情
+"group_buying", // 口碑的医院体检推广
+"group_buying_shelf", // 口碑的医院体检推广
+*/
 
 
 const url = $request.url;
