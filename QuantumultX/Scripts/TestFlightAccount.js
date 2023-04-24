@@ -1,5 +1,5 @@
-/********************************
-TestFlight账户管理脚本
+/*
+ScriptName TestFlight账户管理脚本
 
 脚本作者: @NobyDa 
 脚本兼容: Surge4、QuantumultX、Loon(2.1.20 413+)
@@ -42,8 +42,7 @@ Loon 添加脚本：
 
 Loon插件地址：
 https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_TF_Account.plugin
-
-*********************************/
+*/
 
 const $ = API("TESTFLIGHT-ACCOUNT");
 $.env.isNode ? $request = $.read('Request') : null;
