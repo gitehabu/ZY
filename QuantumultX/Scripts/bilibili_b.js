@@ -1,8 +1,8 @@
-/*
+/********
 https://github.com/ddgksf2013/Scripts/blob/master/bilibili_json.js
 ScriptName bilibili
 2023-04-02 23:18
-*/
+********/
 
 
 const version = 'V2.0.117';
