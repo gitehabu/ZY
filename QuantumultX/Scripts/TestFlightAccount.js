@@ -25,7 +25,6 @@ hostname = testflight.apple.com
 
 Loon插件地址：
 https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_TF_Account.plugin
-
 ================*/
 
 const $ = API("TESTFLIGHT-ACCOUNT");
