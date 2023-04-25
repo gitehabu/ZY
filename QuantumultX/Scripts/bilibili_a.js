@@ -1,6 +1,6 @@
 /********
 https://github.com/RuCu6/QuanX/blob/9a67ac7a83380a7c1cfaa23a3cfe7ac42a7a9ece/Scripts/bilibili/bili.js
-2023-04-25 11:02
+2023-04-25 11:18
 
 tab 更改为以下
           item.name === "直播" ||
@@ -38,7 +38,7 @@ if (!$response.body) {
     if (obj.data.top) {
       obj.data.top = [
         {
-          id: 176,
+          id: 176, 188
           icon: "http://i0.hdslb.com/bfs/archive/d43047538e72c9ed8fd8e4e34415fbe3a4f632cb.png",
           tab_id: "消息Top",
           name: "消息",
