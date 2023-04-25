@@ -1,4 +1,4 @@
-/* ================
+/*================
 https://github.com/RuCu6/QuanX/blob/9a67ac7a83380a7c1cfaa23a3cfe7ac42a7a9ece/Scripts/bilibili/bili.js
 2023-04-25 20:20
 
@@ -54,7 +54,7 @@ https://github.com/RuCu6/QuanX/blob/9a67ac7a83380a7c1cfaa23a3cfe7ac42a7a9ece/Scr
   if (obj.data.top) {
     obj.data.top = [
     
-================ */
+================*/
 
 const url = $request.url;
 if (!$response.body) $done({});
