@@ -6,7 +6,6 @@ ScriptName 标签页处理 resource.show.tab.v2
 2023-04-25 01:20
 ********/
 
-
 const $ = new Env("📺 BiliBili:Enhanced v0.1.5(5) response");
 const URL = new URLs();
 const DataBase = {
