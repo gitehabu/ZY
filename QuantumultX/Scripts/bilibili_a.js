@@ -1,6 +1,6 @@
 /********
 https://github.com/RuCu6/QuanX/blob/9a67ac7a83380a7c1cfaa23a3cfe7ac42a7a9ece/Scripts/bilibili/bili.js
-2023-04-25 15:35
+2023-04-25 15:35 ，，，
 tab 更改为以下
           item.name === "直播" ||
           item.name === "推荐" ||
@@ -27,15 +27,15 @@ if (url.includes("/x/resource/show/skin")) {
         name: "直播", 
         uri: "bilibili://live/home", 
         pos: 5 
-       } 
-       },
+      }, 
+      {
         id: 40, 
         tab_id: "推荐tab", 
         default_selected: 1, 
         name: "推荐", 
         uri: "bilibili://pegasus/promo", 
         pos: 1 
-       }, 
+      }, 
       { 
         id: 41, 
         tab_id: "hottopic", 
@@ -56,7 +56,7 @@ if (url.includes("/x/resource/show/skin")) {
          "name": "数码",
          "uri": "bilibili://pegasus/vertical/13807",
          "tab_id": "kj",
-        "pos": 8
+         "pos": 8
      },
     ]; 
   }
