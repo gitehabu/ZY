@@ -1,6 +1,6 @@
 /********
 https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
-2023-04-22 15:25
+2023-04-25 09:38
 注释掉以下
 "reviews", // 用户评价
 "checkIn",
@@ -17,7 +17,6 @@ https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
 const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
-
 if (url.includes("/faas/amap-navigation/main-page")) {
   // 首页底部卡片
   if (obj.data.cardList) {
@@ -162,7 +161,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "info_env_setting",
     "ip_square",
     "ip_square_share",
-    //"isNewSearchMapCard", // 可能是足迹
+    // "isNewSearchMapCard", // 可能是足迹
     "isPoiBubbleDisplay",
     "lab_beta",
     "lab_screenrecording",
@@ -251,7 +250,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "common_coupon_bar", // 领券条幅 新客专享 省钱卡
     "comprehensiveEditEntrance", // 编辑地点信息
     // "consultancy",
-    "contributor", // 地点贡献
+    // "contributor", // 地点贡献
     // "coupon_allowance",
     // "coupon_entrance",
     "cpt_service_shop", //买卖二手房
@@ -421,8 +420,11 @@ if (url.includes("/faas/amap-navigation/main-page")) {
       delete list.card;
     }
   }
-} else if (url.includes("/shield/search_poi/sug")) {
-  if (obj?.tip_list) {
+} else if (
+  url.includes("/shield/search_poi/sug") ||
+  url.includes("/shield/search/sug")
+) {
+  if (obj?.tip_list && obj?.sug_general_search === "1") {
     let newList = [];
     if (obj?.tip_list?.length > 0) {
       for (let item of obj.tip_list) {
@@ -468,5 +470,4 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     }
   }
 }
-
 $done({ body: JSON.stringify(obj) });
