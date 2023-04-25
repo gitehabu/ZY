@@ -1,6 +1,5 @@
 /********
 https://github.com/RuCu6/QuanX/blob/main/Scripts/xiaohongshu.js
-ScriptName xiaohongshu
 2023-03-04 11:10
 ********/
 
