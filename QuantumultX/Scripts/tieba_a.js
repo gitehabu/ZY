@@ -1,6 +1,5 @@
 /********
 https://github.com/app2smile/rules/blob/master/js/tieba-json.js
-ScriptName tieba
 2023-02-21
 ********/
 
