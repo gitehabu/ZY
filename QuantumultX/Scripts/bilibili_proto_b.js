@@ -1,6 +1,5 @@
 /********
 https://github.com/ddgksf2013/Scripts/blob/master/bilibili_proto.js
-ScriptName bilibili_proto
 2023-04-18
 *********/
 
