@@ -1,12 +1,12 @@
 /********
 https://github.com/RuCu6/QuanX/blob/9a67ac7a83380a7c1cfaa23a3cfe7ac42a7a9ece/Scripts/bilibili/bili.js
-2023-04-25 10:55
+2023-04-25 11:02
 
 tab 更改为以下
           item.name === "直播" ||
           item.name === "推荐" ||
           item.name === "热门" ||
-          item.name === "数码" ||
+          item.name === "科技" ||
           item.name === "影视"
 ********/
 
@@ -30,7 +30,7 @@ if (!$response.body) {
           item.name === "直播" ||
           item.name === "推荐" ||
           item.name === "热门" ||
-          item.name === "数码" ||
+          item.name === "科技" ||
           item.name === "影视"
       );
       fixPos(obj.data.tab);
