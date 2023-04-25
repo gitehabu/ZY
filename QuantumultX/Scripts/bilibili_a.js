@@ -28,7 +28,8 @@ if (!$response.body) {
         (item) =>
           item.name === "直播" ||
           item.name === "推荐" ||
-          item.name === "热门" ||||
+          item.name === "热门" ||
+          item.name === "科技"
           item.name === "影视"
       );
       fixPos(obj.data.tab);
