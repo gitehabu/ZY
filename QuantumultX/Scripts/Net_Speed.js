@@ -1,4 +1,4 @@
-/********
+/*================
 https://github.com/getsomecat/Qx/blob/main/Net_Speed.js
 作者：@wuhu_zzz @xream @keywos @整点猫咪 技术指导：整点薯条 
 整点花里胡哨
@@ -12,7 +12,8 @@ mb参数：每次测试消耗的流量，默认1MB，经测试最大可4MB参数
 ⚠️不想变化多端？？
 可直接使用最基本的panel参数，title、icon、icon-color
 配置实例：titile=不想花里胡哨了&icon=hare&icon-color=#CDCDCD
-********/
+
+================*/
 
 const $ = new Env('network-speed')
 let arg
