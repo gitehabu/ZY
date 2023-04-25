@@ -1,4 +1,4 @@
-/*********
+/*================
 https://github.com/RuCu6/QuanX/blob/main/Scripts/noRedirect.js
 Skip the redirect page.
 
@@ -32,7 +32,7 @@ Weibo_no_redirect3 = type=http-response,pattern=^https?:\/\/(sinaurl|t)\.cn\/,sc
 
 [mitm]
 hostname = links.jianshu.com, www.jianshu.com, link.zhihu.com, weibo.cn, t.cn, sinaurl.cn, shop.sc.weibo.com
-********/
+================*/
 
 const jianshur = /https:\/\/links\.jianshu\.com\/go\?to=(.*)/;
 const jianshur2 = /https:\/\/www\.jianshu\.com\/go-wild\?ac=\d&url=(.*)/;
