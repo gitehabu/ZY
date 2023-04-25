@@ -1,6 +1,5 @@
 /********
 https://github.com/ddgksf2013/Scripts/blob/master/coolapk.js
-ScriptName coolapk
 2022-02-18
 ********/
 
