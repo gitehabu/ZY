@@ -7,9 +7,9 @@ https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
           // removeAvatar(item.data);
 
 注释掉 我的页面 top8 卡片
-         /* newItems.push(item);
+          newItems.push(item);
         } else if (itemId === "100505_-_top8") {
-          if (item.items) {
+       /* if (item.items) {
             item.items = item.items.filter(
               (i) =>
                 i.itemId === "100505_-_album" || // 我的相册
@@ -358,9 +358,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               );
             }
           }
-         /* newItems.push(item);
+          newItems.push(item);
         } else if (itemId === "100505_-_top8") {
-          if (item.items) {
+      /* if (item.items) {
             item.items = item.items.filter(
               (i) =>
                 i.itemId === "100505_-_album" || // 我的相册
