@@ -1,6 +1,6 @@
 /********
 https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
-2023-04-23 22:20
+2023-04-25 22:20
 注释掉铁粉标识,如下
 头像挂件,关注按钮.(评论区铁粉标识)
 removeAvatar(item.data);
@@ -349,8 +349,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               // i.itemId === "100505_-_ordercenter" || // 我的订单
               // i.itemId === "100505_-_productcenter" || // 创作中心
               // i.itemId === "100505_-_promote" || // 广告中心
-            ); */
-          }
+            );
+          } */
           newItems.push(item);
         } else if (itemId === "100505_-_manage") {
           if (item.style) {
