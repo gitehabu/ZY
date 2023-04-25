@@ -3,9 +3,7 @@ https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
 ScriptName amap
 2023-04-22 15:25
 
-
 注释掉以下
-
 "reviews", // 用户评价
 "checkIn",
 "check_in", // 足迹打卡
@@ -18,7 +16,6 @@ ScriptName amap
 "group_buying", // 口碑的医院体检推广
 "group_buying_shelf", // 口碑的医院体检推广
 ********/
-
 
 const url = $request.url;
 if (!$response.body) $done({});
