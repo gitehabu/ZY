@@ -6,7 +6,6 @@ https://github.com/RuCu6/QuanX/blob/main/Scripts/xiaohongshu.js
 const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
-
 if (url.includes("/v1/search/hot_list")) {
   if (obj.data?.items) {
     obj.data.items = [];
