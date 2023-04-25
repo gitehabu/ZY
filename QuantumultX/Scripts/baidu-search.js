@@ -4,7 +4,6 @@ ScriptName 百度_搜索结果广告
 ^https?:\/\/(www|m)\.baidu\.com\/.*word=.* url script-response-body https://raw.githubusercontent.com/ZY714IU/ZY/main/QuantumultX/Scripts/baidu-search.js
 ********/
 
-
 let rHead = "";
 let newStyle =
   "";
