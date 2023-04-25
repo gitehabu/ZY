@@ -1,6 +1,5 @@
 /*******
 https://github.com/Maasea/sgmodule/blob/master/Script/Youtube/youtube.js
-ScriptName youtube
 Build: 2023/3/3 12:14:26
 非压缩状态代码可见同目录下 youtube.src.js
 ********/
