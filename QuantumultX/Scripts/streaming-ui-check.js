@@ -10,13 +10,11 @@ Thanks to & modified from
 For Quantumult-X 598+ ONLY!!
 
 2023-02-14
-
 - 支持 ChatGPT 检测
 
 [task_local]
 event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体-解锁查询, img-url=checkmark.seal.system, enabled=true
 ********/
-
 
 const BASE_URL = 'https://www.netflix.com/title/';
 const BASE_URL_YTB = "https://www.youtube.com/premium";
