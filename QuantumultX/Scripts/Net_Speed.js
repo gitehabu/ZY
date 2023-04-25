@@ -14,7 +14,6 @@ mb参数：每次测试消耗的流量，默认1MB，经测试最大可4MB参数
 配置实例：titile=不想花里胡哨了&icon=hare&icon-color=#CDCDCD
 ********/
 
-
 const $ = new Env('network-speed')
 let arg
 if (typeof $argument != 'undefined') {
