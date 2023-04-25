@@ -105,6 +105,7 @@ host, adashxgc.ut.taobao.com, reject
 host, awaken.amap.com, reject
 host, amap-aos-info-nogw.amap.com, reject
 host, free-aos-cdn-image.amap.com, reject
+
 # 微博_去开屏
 //host, boot.biz.weibo.com, reject
 host, sdkclick.biz.weibo.com, reject
@@ -112,6 +113,7 @@ host, kadmimage.biz.weibo.com, reject
 host, sdkaction.biz.weibo.com, reject
 host, adstrategy.biz.weibo.com, reject
 host, sdkmonitor.biz.weibo.com, reject
+
 ; 新浪
 host, sax.sina.com.cn, reject
 host, saxn.sina.com.cn, reject
@@ -225,9 +227,9 @@ host, hub5btmain.v6.shub.sandai.net, reject
 
 # Bilibili_自动换区支持(该规则将拦截B站GRPC服务端地址,迫使其使用旧协议传输内容,使换区脚本正常触发)
 ip-cidr, 203.107.1.1/24, reject
-; Bilibili proto 支持
+; Bilibili proto
 host, grpc.biliapi.net, reject
-; 哔哩哔哩间歇性失效
+; 后台间歇性失效 请屏蔽以下
 //host, mall.bilibili.com, reject
 //host, passport.bilibili.com, reject
 
@@ -277,7 +279,6 @@ host, business.msstatic.com, reject
 # 其他
 host-keyword, adsystem, reject
 host-keyword, adservice, reject
-
 
 # name: Hijacking
 # repo: https://github.com/blackmatrix7/ios_rule_script
