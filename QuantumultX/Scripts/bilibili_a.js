@@ -1,11 +1,13 @@
-/********
+/* ================
 https://github.com/RuCu6/QuanX/blob/9a67ac7a83380a7c1cfaa23a3cfe7ac42a7a9ece/Scripts/bilibili/bili.js
 2023-04-25 20:20
+
 更改 tab
           item.name === "直播" ||
           item.name === "推荐" ||
           item.name === "热门" ||
           item.name === "影视"
+
 更改 tab
   // 标签页
   if (obj.data.tab) {
@@ -51,12 +53,12 @@ https://github.com/RuCu6/QuanX/blob/9a67ac7a83380a7c1cfaa23a3cfe7ac42a7a9ece/Scr
   }
   if (obj.data.top) {
     obj.data.top = [
-********/
+    
+================ */
 
 const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
-
 // 强制设置的皮肤
 if (url.includes("/x/resource/show/skin")) {
   if (obj.data?.common_equip) {
