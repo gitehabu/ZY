@@ -6,7 +6,6 @@ event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/
 2023-04-14
 *********/
 
-
 // var content= `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: bold">` + response.body + `</p>`;
 
 let base_url = "https://scamalytics.com/ip/"
