@@ -1,7 +1,5 @@
 /*********
 https://github.com/RuCu6/QuanX/blob/main/Scripts/noRedirect.js
-ScriptName noRedirect
-
 Skip the redirect page.
 
 Quantumult X:
