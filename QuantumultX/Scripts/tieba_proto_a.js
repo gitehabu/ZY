@@ -1,6 +1,5 @@
 /*******
 https://github.com/app2smile/rules/blob/master/js/tieba-proto.js
-ScriptName tieba_proto
 2023-
 ********/
 
