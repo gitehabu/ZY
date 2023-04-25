@@ -50,13 +50,14 @@ if (url.includes("/x/resource/show/skin")) {
             uri: "bilibili://pgc/cinema-tab", 
             pos: 3 
           }, 
-          { 
-            id: 1716, 
-            tab_id: "kj", 
-            name: "数码", 
-            uri: "bilibili://pegasus/vertical/13807", 
-            pos: 8 
-          }, 
+          {
+            "id": 1716,
+            "icon": "http://i0.hdslb.com/bfs/archive/38d2c2669a68eae8a53fc9afaa193aafa5265a78.png",
+            "name": "数码",
+            "uri": "bilibili://pegasus/vertical/13807",
+            "tab_id": "kj",
+            "pos": 8
+         },
         ]; 
       }
   if (obj.data.top) {
