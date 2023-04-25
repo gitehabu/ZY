@@ -4,13 +4,11 @@ ScriptName 百度搜索防跳转AppStore
 ^https?:\/\/boxer\.baidu\.com\/scheme\?scheme url script-response-header https://raw.githubusercontent.com/ZY714IU/ZY/main/QuantumultX/Scripts/baidu-no-redirect.js
 ********/
 
-
 const method = $request.method;
 const url = $request.url;
 const status = $response.status;
 let headers = $response.headers;
 const notifiTitle = "百度搜索防跳转AppStore错误";
-
 if (method !== "GET" || status !== 302 || !headers.hasOwnProperty('Location')) {
     console.log(`method:${method},status:${status},url:${url}`);
     $notification.post(notifiTitle, "百度防跳转AppStore", "method/status有误");
