@@ -5,7 +5,6 @@ Author  @Adblock4limbo, @RuCu6
 右上角入口按钮(已删除) .square-enterance,
 ********/
 
-
 let rHead = "<head>";
 let newStyle =
   "<head><style> #foot, .recordcode, .index-copyright, div[style*=overflow], article, .rn-container, .ns-square-point, .voice.call, .ts-image-uploader, .ts-image-uploader-icon, .ts-image-uploader-icon-point, .qrcode.call, .navs-bottom-bar, .tab_news_1, .s-loading-frame.bottom{display:none!important} </style>";
