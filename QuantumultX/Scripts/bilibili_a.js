@@ -1,11 +1,56 @@
 /********
 https://github.com/RuCu6/QuanX/blob/9a67ac7a83380a7c1cfaa23a3cfe7ac42a7a9ece/Scripts/bilibili/bili.js
-2023-04-25 19:16
+2023-04-25 19:22
 tab 更改为以下
           item.name === "直播" ||
           item.name === "推荐" ||
           item.name === "热门" ||
           item.name === "影视"
+
+  // 标签页
+  if (obj.data.tab) {
+    obj.data.tab = [ 
+      { 
+        id: 39, 
+        tab_id: "直播tab", 
+        name: "直播", 
+        uri: "bilibili://live/home", 
+        pos: 5 
+      }, 
+      {
+        id: 40, 
+        tab_id: "推荐tab", 
+        default_selected: 1, 
+        name: "推荐", 
+        uri: "bilibili://pegasus/promo", 
+        pos: 1 
+      }, 
+      { 
+        id: 41, 
+        tab_id: "hottopic", 
+        name: "热门", 
+        uri: "bilibili://pegasus/hottopic", 
+        pos: 2 
+      }, 
+      { 
+        id: 151, 
+        tab_id: "film", 
+        name: "影视", 
+        uri: "bilibili://pgc/cinema-tab", 
+        pos: 3 
+      }, 
+      {
+        id: 1716,
+        icon: "http://i0.hdslb.com/bfs/archive/38d2c2669a68eae8a53fc9afaa193aafa5265a78.png",
+        name: "数码",
+        uri: "bilibili://pegasus/vertical/13807",
+        tab_id: "kj",
+        pos: 8
+      },
+     ]; 
+  }
+  if (obj.data.top) {
+    obj.data.top = [
 ********/
 
 const url = $request.url;
