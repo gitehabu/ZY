@@ -1,6 +1,6 @@
 /********
 https://github.com/RuCu6/QuanX/blob/9a67ac7a83380a7c1cfaa23a3cfe7ac42a7a9ece/Scripts/bilibili/bili.js
-2023-04-25 15:35 ，，，
+2023-04-25 15:35 123
 tab 更改为以下
           item.name === "直播" ||
           item.name === "推荐" ||
@@ -51,14 +51,14 @@ if (url.includes("/x/resource/show/skin")) {
         pos: 3 
       }, 
       {
-         "id": 1716,
-         "icon": "http://i0.hdslb.com/bfs/archive/38d2c2669a68eae8a53fc9afaa193aafa5265a78.png",
-         "name": "数码",
-         "uri": "bilibili://pegasus/vertical/13807",
-         "tab_id": "kj",
-         "pos": 8
-     },
-    ]; 
+       "id": 1716,
+       "icon": "http://i0.hdslb.com/bfs/archive/38d2c2669a68eae8a53fc9afaa193aafa5265a78.png",
+        "name": "数码",
+        "uri": "bilibili://pegasus/vertical/13807",
+        "tab_id": "kj",
+        "pos": 8
+      },
+     ]; 
   }
   if (obj.data.top) {
     obj.data.top = [
