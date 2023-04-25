@@ -8,11 +8,9 @@ ScriptName weibo
 removeAvatar(item.data);
 ********/
 
-
 const url = $request.url;
 if (!$response.body) $done({});
 let body = $response.body;
-
 // 微博详情页菜单配置
 const itemMenusConfig = {
   creatortypeask: false, // 转发任务
