@@ -1,6 +1,5 @@
 /********
 https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
-ScriptName amap
 2023-04-22 15:25
 
 注释掉以下
