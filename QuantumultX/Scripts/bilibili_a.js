@@ -8,6 +8,8 @@ tab 更改为以下
           item.name === "影视"
 ********/
 
+// 2023-04-25 15:35
+
 const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
@@ -20,45 +22,14 @@ if (url.includes("/x/resource/show/skin")) {
 } else if (url.includes("/x/resource/show/tab/v2")) {
   // 标签页
   if (obj.data.tab) {
-    obj.data.tab = [ 
-      { 
-        id: 39, 
-        tab_id: "直播tab", 
-        name: "直播", 
-        uri: "bilibili://live/home", 
-        pos: 5 
-      }, 
-      {
-        id: 40, 
-        tab_id: "推荐tab", 
-        default_selected: 1, 
-        name: "推荐", 
-        uri: "bilibili://pegasus/promo", 
-        pos: 1 
-      }, 
-      { 
-        id: 41, 
-        tab_id: "hottopic", 
-        name: "热门", 
-        uri: "bilibili://pegasus/hottopic", 
-        pos: 2 
-      }, 
-      { 
-        id: 151, 
-        tab_id: "film", 
-        name: "影视", 
-        uri: "bilibili://pgc/cinema-tab", 
-        pos: 3 
-      }, 
-      {
-        id: 1716,
-        icon: "http://i0.hdslb.com/bfs/archive/38d2c2669a68eae8a53fc9afaa193aafa5265a78.png",
-        name: "数码",
-        uri: "bilibili://pegasus/vertical/13807",
-        tab_id: "kj",
-        pos: 8
-      },
-     ]; 
+    obj.data.tab = obj.data.tab.filter(
+      (item) =>
+        item.name === "推荐" ||
+        item.name === "热门" ||
+        item.name === "动画" ||
+        item.name === "影视"
+    );
+    fixPos(obj.data.tab);
   }
   if (obj.data.top) {
     obj.data.top = [
