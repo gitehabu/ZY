@@ -4,7 +4,6 @@ ScriptName amap
 2022-02-16
 ********/
 
-
 const version = 'V2.0.111';
 const mainConfig = {
     isDebug: !1,
