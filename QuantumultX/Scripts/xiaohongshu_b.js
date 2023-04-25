@@ -1,6 +1,5 @@
 /********
 https://github.com/ddgksf2013/Scripts/blob/edf9f26ac9b74ac42ba14fd585afb278dbd30ceb/redbook_json.js
-ScriptName xiaohongshu
 2023-03-14
 ********/
 
