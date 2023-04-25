@@ -1,4 +1,4 @@
-/* ================
+/*================
 https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
 2023-04-23 19:55
 
@@ -26,7 +26,7 @@ https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
         } else if (itemId === "100505_-_manage") {
           if (item.style) {
             
-================ */
+================*/
 
 const url = $request.url;
 if (!$response.body) $done({});
