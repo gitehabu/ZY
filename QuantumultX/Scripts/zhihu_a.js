@@ -1,12 +1,11 @@
-/********
+/*================
 https://github.com/RuCu6/QuanX/blob/main/Scripts/zhihu.js
 2023-04-11 12:00
-********/
+================*/
 
 if (!$response.body) $done({});
 const url = $request.url;
 let body = $response.body;
-
 if (url.includes("/appview/v3/zhmore")) {
   // 我的页面
   body = body.replace(/<\/style><main.*<\/div><\/main>/g, "");
