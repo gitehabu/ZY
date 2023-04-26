@@ -5,7 +5,7 @@
 # 开启「分流匹配优化」选项，则匹配优先级如下
 ; host > host-suffix > host-keyword(wildcard) > geoip = ip-cidr > user-agent
 ; 完整域名匹配
-//host, www. google.com, select
+//host, www.google.com, select
 ; 域名后缀匹配
 //host-suffix, baidu.com, direct
 ; 域名关键词匹配
@@ -39,9 +39,9 @@ host, vi.l.qq.com, direct
 host, livew.l.qq.com, direct
 host, fairplay.l.qq.com, direct
 # 其他
+host, ca.iadsdk.apple.com, direct
 host-suffix, ipleak.net, direct
 host-keyword, tkys, direct
-host, ca.iadsdk.apple.com, direct
 
 # ===== PROXY ===== #
 # 可把 Select 换成任意 策略组/节点
