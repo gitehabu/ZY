@@ -1,15 +1,15 @@
 /*================
 https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
-2023-04-23 19:55
+2023-04-26 12:55
 
 注释掉 评论区铁粉标识、头像挂件、关注按钮
 /2/comments/build_comments
-          // removeAvatar(item.data);
+           // removeAvatar(item.data);
 
 注释掉 我的页面 top8 卡片
           newItems.push(item);
         } else if (itemId === "100505_-_top8") {
-       /* if (item.items) {
+   注释 /* if (item.items) {
             item.items = item.items.filter(
               (i) =>
                 i.itemId === "100505_-_album" || // 我的相册
@@ -21,7 +21,7 @@ https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
               // i.itemId === "100505_-_productcenter" || // 创作中心
               // i.itemId === "100505_-_promote" || // 广告中心
             );
-          } * /
+          } * / 注释
           newItems.push(item);
         } else if (itemId === "100505_-_manage") {
           if (item.style) {
@@ -31,6 +31,7 @@ https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
 const url = $request.url;
 if (!$response.body) $done({});
 let body = $response.body;
+
 // 微博详情页菜单配置
 const itemMenusConfig = {
   creatortypeask: false, // 转发任务
@@ -165,7 +166,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             // 微博伪装评论
             if (item.data.user) {
               // 头像挂件,关注按钮
-          // removeAvatar(item.data);
+           // removeAvatar(item.data);
               if (
                 item.data.user.name === "超话社区" ||
                 item.data.user.name === "微博视频"
@@ -261,7 +262,19 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj.items?.[0]?.items) {
       let item = obj.items?.[0]?.items;
       for (let i of item) {
-        removeAvatar(i.data);
+        removeAvatar(i?.data);
+      }
+    }
+  } else if (url.includes("/2/flowlist")) {
+    if (obj.items) {
+      let item = obj.items;
+      for (let i of item) {
+        if (i.items) {
+          let ii = i?.items;
+          for (let l of ii) {
+            removeAvatar(l?.data);
+          }
+        }
       }
     }
   } else if (url.includes("/2/messageflow/notice")) {
@@ -360,7 +373,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
           newItems.push(item);
         } else if (itemId === "100505_-_top8") {
-      /* if (item.items) {
+         /* if (item.items) {
             item.items = item.items.filter(
               (i) =>
                 i.itemId === "100505_-_album" || // 我的相册
@@ -694,18 +707,6 @@ function isAd(data) {
 
 // 移除头像挂件,关注按钮
 function removeAvatar(data) {
-  if (data?.buttons) {
-    delete data.buttons;
-  }
-  if (data?.cardid) {
-    delete data.cardid;
-  }
-  if (data?.icons) {
-    delete data.icons;
-  }
-  if (data?.pic_bg_new) {
-    delete data.pic_bg_new;
-  }
   if (data?.user?.avatargj_id) {
     delete data.user.avatargj_id;
   }
@@ -717,6 +718,18 @@ function removeAvatar(data) {
   }
   if (data?.user?.icons) {
     delete data.user.icons;
+  }
+  if (data?.buttons) {
+    delete data.buttons;
+  }
+  if (data?.cardid) {
+    delete data.cardid;
+  }
+  if (data?.icons) {
+    delete data.icons;
+  }
+  if (data?.pic_bg_new) {
+    delete data.pic_bg_new;
   }
   return data;
 }
