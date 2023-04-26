@@ -191,7 +191,6 @@ host-suffix, googletagservices.com, reject
 host-suffix, amazon-adsystem.com, reject
 # > 网易云音乐
 host, iadmat.nosdn.127.net, reject
-host, httpdns.n.netease.com, reject
 host, iadmusicmat.music.126.net, reject
 host, iadmusicmatvideo.music.126.net, reject
 host-suffix, 163jiasu.com, reject
