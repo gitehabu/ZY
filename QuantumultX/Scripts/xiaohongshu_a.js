@@ -1,12 +1,17 @@
 /*================
 https://github.com/RuCu6/QuanX/blob/main/Scripts/xiaohongshu.js
-2023-03-04 11:10
+2023-04-26 20:10
 ================*/
 
 const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
-if (url.includes("/v1/search/hot_list")) {
+
+if (url.includes("/v1/search/banner_list")) {
+  if (obj.data) {
+    obj.data = {};
+  }
+} else if (url.includes("/v1/search/hot_list")) {
   if (obj.data?.items) {
     obj.data.items = [];
   }
@@ -67,6 +72,12 @@ if (url.includes("/v1/search/hot_list")) {
       }
     }
     obj.data = newItems;
+  }
+} else if (url.includes("/v10/search/notes")) {
+  if (obj.data?.items) {
+    obj.data.items = obj.data.items.filter(
+      (i) => !i.model_type.includes("ads")
+    );
   }
 }
 
