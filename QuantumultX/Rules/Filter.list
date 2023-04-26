@@ -103,9 +103,9 @@ host, adashxgc.ut.taobao.com, reject
 host, awaken.amap.com, reject
 host, amap-aos-info-nogw.amap.com, reject
 host, free-aos-cdn-image.amap.com, reject
-# 微博_去开屏
-host, sdkclick.biz.weibo.com, reject
+# 微博
 host, kadmimage.biz.weibo.com, reject
+host, sdkclick.biz.weibo.com, reject
 host, sdkaction.biz.weibo.com, reject
 host, adstrategy.biz.weibo.com, reject
 host, sdkmonitor.biz.weibo.com, reject
