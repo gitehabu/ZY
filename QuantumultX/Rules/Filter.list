@@ -1,51 +1,54 @@
 # Name   Filter
 # Author @RuCu6, @ddgksf2013, @kokoryh, @blackmatrix7, @app2smile, @DivineEngine, @zhangjun, @lwd-temp, @NobyDa
-# UpdateTime 2023-03-13 13:35
+# Update 2023-04-26 20:00
 # “#” “;" “//” 是注释符号，去掉符号该行才生效
 # 开启「分流匹配优化」选项，则匹配优先级如下
 ; host > host-suffix > host-keyword(wildcard) > geoip = ip-cidr > user-agent
 ; 完整域名匹配
 //host, www. google.com, select
-; 域名关键词匹配
-//host-keyword, adsite, reject
 ; 域名后缀匹配
 //host-suffix, baidu.com, direct
+; 域名关键词匹配
+//host-keyword, adsite, reject
 ; 域名通配符匹配
 //host-wildcard, *abc.com, proxy
 ; user-agent
 //user-agent, ?abc*, proxy
 
-### ===== direct ===== ###
-# 微博；注意! 微博去广告不可开启 Quantumult X「兼容性增强」功能，否则微博脚本失效！
+# ===== direct ===== #
+# 微博
 host, sdkapp.uve.weibo.com, direct
 host, weibointl.api.weibo.cn, direct
-
-# 其他
+# 阿里系
+host, amdc.m.taobao.com, direct
+host-suffix, ynuf.aliapp.org, direct
+# 个推
 host-suffix, getui.com, direct
+# 友盟
 host-suffix, msg.umeng.com, direct
 host-suffix, msg.umengcloud.com, direct
+# Wi-Fi万能钥匙
 host-suffix, 51y5.net, direct
+# 汽水音乐
 host-suffix, qishui.com, direct
-host-suffix, ipleak.net, direct
-host-suffix, ynuf.aliapp.org, direct
-host-keyword, tkys, direct
+# 茶壶杯
 host-keyword, cupfox, direct
-
 # 腾讯
 host, vd.l.qq.com, direct
 host, vi.l.qq.com, direct
 host, livew.l.qq.com, direct
 host, fairplay.l.qq.com, direct
+# 其他
+host-suffix, ipleak.net, direct
+host-keyword, tkys, direct
+host, ca.iadsdk.apple.com, direct
 
-### ===== PROXY ===== ###
-; 可把 Select 换成任意 策略组/节点
-
+# ===== PROXY ===== #
+# 可把 Select 换成任意 策略组/节点
 # 必应国际版(不开分流则国内版)
 host, www.bing.com, Select
-
 # Apple
 host-suffix, testflight.apple.com, Select
-
 # 机场
 host-suffix, subs.usero.cn, Select
 host-keyword, fishchips, Select
@@ -53,13 +56,11 @@ host-keyword, efcloud, Select
 host-keyword, efshop, Select
 host-keyword, mojie, Select
 host-keyword, xsus, Select
-
 # 代理软件激活检测
 host-suffix, nssurge.com, Select
 host-suffix, quantumult.app, Select
 host-suffix, surge-activation.com, Select
 host-suffix, stash-activation.com, Select
-
 # 其他
 host-suffix, shrtm.nu, Select
 host-suffix, adtidy.org, Select
@@ -71,7 +72,7 @@ host-keyword, v2ex, Select
 host-keyword, loon, Select
 host-keyword, notion, Select
 
-### ===== reject ===== ###
+# ===== reject ===== #
 # 安全浏览限制解除
 host, lookup.api.bsb.baidu.com, reject
 host, proxy.safebrowsing.apple, reject
@@ -80,7 +81,6 @@ host, safebrowsing.googleapis.com, reject
 host, safebrowsing.urlsec.qq.com, reject
 host, token.safebrowsing.apple, reject
 host, u3.ucweb.com, reject
-
 # 知乎
 host, mqtt.zhihu.com, reject
 host, sugar.zhihu.com, reject
@@ -91,7 +91,6 @@ host, appcloud2.in.zhihu.com, reject
 //ip-cidr, 103.41.167.237/24, reject
 //ip-cidr, 118.89.204.198/24, reject
 //ip6-cidr, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, reject
-
 # 阿里巴巴
 host, adashx.ut.amap.com, reject
 host, adashx.m.taobao.com, reject
@@ -99,21 +98,17 @@ host, adashbc.m.taobao.com, reject
 host, adash-c.ut.taobao.com, reject
 host, adashbc.ut.taobao.com, reject
 host, adashxgc.ut.taobao.com, reject
-
 # 高德地图；amdc 已在重写加入
 //host, amdc.m.taobao.com, rejec
 host, awaken.amap.com, reject
 host, amap-aos-info-nogw.amap.com, reject
 host, free-aos-cdn-image.amap.com, reject
-
 # 微博_去开屏
-//host, boot.biz.weibo.com, reject
 host, sdkclick.biz.weibo.com, reject
 host, kadmimage.biz.weibo.com, reject
 host, sdkaction.biz.weibo.com, reject
 host, adstrategy.biz.weibo.com, reject
 host, sdkmonitor.biz.weibo.com, reject
-
 ; 新浪
 host, sax.sina.com.cn, reject
 host, saxn.sina.com.cn, reject
@@ -123,7 +118,6 @@ host, beacon.sina.com.cn, reject
 host, adimg.uve.weibo.com, reject
 host, adimg.vue.weibo.com, reject
 host, u1.img.mobile.sina.cn, reject
-
 # 百度
 host, app.duxiaoman.com, reject
 host, afd.baidu.com, reject
@@ -141,8 +135,10 @@ ip-cidr, 180.76.76.200/32, reject
 ; 贴吧屏蔽 ws (副作用；消息通知功能失效，需手动进入查看)，强制帖子接口走 http
 host, im.tieba.baidu.com, reject
 ip-cidr, 203.107.1.1/24, reject
-
 # 字节跳动
+host, ad.toutiao.com, reject
+host, ad.zijieapi.com, reject
+host, ad-sign.byteimg.com, reject
 host, dig.bdurl.net, reject
 host, ug.snssdk.com, reject
 host, is.snssdk.com, reject
@@ -154,17 +150,14 @@ host, tnc3-aliec2.snssdk.com, reject
 host-suffix, pangolin-sdk-toutiao-b.com, reject
 host-suffix, pangolin-sdk-toutiao.com, reject
 host, api-access.pangolin-sdk-toutiao-b.com, reject
-host, ad.toutiao.com, reject
 host, dsp.toutiao.com, reject
-host, ad-sign.byteimg.com, reject
-host, tnc3-aliec2.zijieapi.com, reject
 host, tnc3-alisc1.zijieapi.com, reject
 host, ads3-normal-lq.zijieapi.com, reject
 host, ads5-normal-lq.zijieapi.com, reject
 host, polaris3-normal-lq.zijieapi.com, reject
 host, sf3-fe-tos.pglstatp-toutiao.com, reject
 host, api-access.pangolin-sdk-toutiao.com, reject
-
+host-wildcard, p?-ad-sign.byteimg.com, reject
 # 腾讯
 host, e.qq.com, reject
 host, l.qq.com, reject
@@ -182,13 +175,11 @@ host, livep.l.t002.ottcn.com, reject
 host, splashqqlive.gtimg.com, reject
 host, wxsnsdythumb.wxs.qq.com, reject
 host, adsmind.apdcdn.tc.qq.com, reject
-
 # Apple
 ; 绕过 App 企业证书过期
 host, ocsp.apple.com, reject
 ; Safari 防跳转
 host, app-site-association.cdn-apple.com, reject
-
 # Google
 host, ads.youtube.com, reject
 host-suffix, doubleclick.net, reject
@@ -196,17 +187,14 @@ host-suffix, googleadservices.com, reject
 host-suffix, googleadsserving.cn, reject
 host-suffix, googlesyndication.com, reject
 host-suffix, googletagservices.com, reject
-
 # Amazon AD
 host-suffix, amazon-adsystem.com, reject
-
 # > 网易云音乐
 host, iadmat.nosdn.127.net, reject
 host, httpdns.n.netease.com, reject
 host, iadmusicmat.music.126.net, reject
 host, iadmusicmatvideo.music.126.net, reject
 host-suffix, 163jiasu.com, reject
-
 # 云闪付
 host, ads.95516.com, reject
 host, tysdk.95516.com, reject
@@ -214,17 +202,14 @@ host, switch.cup.com.cn, reject
 host, sdk-conf.getui.com, reject
 host, cm-10-138.getui.com, reject
 host, sdk.open.talk.getui.net, reject
-
 # 迅雷_去开屏
 host, adsp.xunlei.com, reject
 host, adapi.izuiyou.com, reject
 host, etl.xlmc.sandai.net, reject
-
 ; 迅雷 解除版权限制
 host, hub5emu.v6.shub.sandai.net, reject
 host, hub5idx.v6.shub.sandai.net, reject
 host, hub5btmain.v6.shub.sandai.net, reject
-
 # Bilibili_自动换区支持(该规则将拦截B站GRPC服务端地址,迫使其使用旧协议传输内容,使换区脚本正常触发)
 ip-cidr, 203.107.1.1/24, reject
 ; Bilibili proto
@@ -232,16 +217,12 @@ host, grpc.biliapi.net, reject
 ; 后台间歇性失效 请屏蔽以下
 //host, mall.bilibili.com, reject
 //host, passport.bilibili.com, reject
-
 # 虎扑
 host-suffix, goblin.hupu.com, reject
-
 # 彩云天气
 host, ad.cyapi.cn, reject
-
 # 58同城
 host, adshow.58.com, reject
-
 # 美图秀秀
 host-suffix, xiuxiu.video.xiuxiustatic.com, reject
 host-suffix, qchannel01.cn, reject
@@ -256,33 +237,27 @@ host-suffix, xiuxiu-im-route.meitu.com, reject
 host-suffix, push.meitu.com, reject
 host-suffix, i.qchannel03.cn, reject
 host-suffix, adui.tg.meitu.com, reject
-
 # 工商银行_开屏
 host, pageviewp.icbc.com.cn, reject
-
 # 央视频_开屏
 host, wimg.yangshipin.cn, reject
-
 # 数字联盟
 host-suffix, shuzilm.cn, reject
-
 # 快手联盟
 host, open.e.kuaishou.com, reject
-
 # 虎牙直播开屏广告
 host, pp-cdnfile2pcdn.msstatic.com, reject
 host, livewebbs2pcdn.msstatic.com, reject
 host, huyafile.msstatic.com, reject
 host, livewebbs2.msstatic.com, reject
 host, business.msstatic.com, reject
-
 # 其他
 host-keyword, adsystem, reject
 host-keyword, adservice, reject
 
-# name: Hijacking
-# repo: https://github.com/blackmatrix7/ios_rule_script
-# updated: 2023-04-07 14:47:32
+# Hijacking(反劫持)
+# https://github.com/blackmatrix7/ios_rule_script
+# 2023-04-07 14:47:32
 # host: 1
 # host-suffix: 185
 # ip-cidr: 42
