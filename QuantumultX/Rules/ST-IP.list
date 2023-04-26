@@ -1,49 +1,51 @@
-# UpdateTime  2023-03-12 21:55
-### ===== IP ===== ###
-# 针对部分网站显示IP归属地的Quantumult X 分规则, 以下是项目地址 @https://github.com/lwd-temp/anti-ip-attribution
-; 注意!更改IP容易被 风控、封号,不建议使用!
+# Name   ip & speedtest
+# Update 2023-04-26 20:15
+# 针对部分网站显示 ip 归属地的 Quantumult X 分规则， 以下是项目地址 https://github.com/lwd-temp/anti-ip-attribution
+
+# ===== anti-ip ===== #
+# 注意! 更改 ip 容易被 风控、封号，不建议使用!
 # 微博
-HOST, api.weibo.cn
-# 抖音;需家宽IP才生效,否则显示 未知
-HOST-SUFFIX, amemv.com
+//host, api.weibo.cn, direct 
 # 微信
-HOST, mp.weixin.qq.com
-# 贴吧
-HOST, c.tieba.baidu.com
-# 快手
-HOST-SUFFIX, gifshow.com
-HOST-SUFFIX, ksapisrv.com
+//host, mp.weixin.qq.com, direct 
 # 小红书
-HOST, edith.xiaohongshu.com
+//host, edith.xiaohongshu.com, direct 
+# 贴吧
+//host, c.tieba.baidu.com, direct
+# 抖音；需家宽 ip 才生效，否则显示 “未知”
+//host-suffix, amemv.com, direct 
+# 快手
+//host-suffix, gifshow.com, direct 
+//host-suffix, ksapisrv.com, direct 
 # 知乎
-//HOST, api.zhihu.com
-//IP-CIDR, 103.41.167.0/24
+//host, api.zhihu.com, direct 
+//ip-cidr, 103.41.167.0/24, direct 
 
-### ===== Speedtest ===== ###
+# ===== Speedtest ===== #
 # 腾讯手机管家测速
-//HOST-SUFFIX, rdt.tfogc.com
-//HOST-SUFFIX, pmir.3g.qq.com
+//host-suffix, rdt.tfogc.com, direct 
+//host-suffix, pmir.3g.qq.com, direct 
 # 安兔兔测速
-//HOST-SUFFIX, www.qq.com
-//HOST-SUFFIX, dldir1.qq.com
+//host-suffix, www.qq.com, direct 
+//host-suffix, dldir1.qq.com, direct 
 
-# Speedtest @https://github.com/blackmatrix7/ios_rule_script
-HOST, speed.dler.io
-HOST-SUFFIX, fast.com
-HOST-SUFFIX, ookla.com
-HOST-SUFFIX, cdnst.net
-HOST-SUFFIX, ekahau.com
-HOST-SUFFIX, webtest.net
-HOST-SUFFIX, pingtest.net
-HOST-SUFFIX, speedtest.co
-HOST-SUFFIX, cellmaps.com
-HOST-SUFFIX, ekahau.cloud
-HOST-SUFFIX, speed.dler.io
-HOST-SUFFIX, speedtest.net
-HOST-SUFFIX, ooklaserver.net
-HOST-SUFFIX, ooklaserver.net
-HOST-SUFFIX, test.nextlevel.net
-HOST-SUFFIX, speedtestcustom.com
-HOST-SUFFIX, speed.cloudflare.com
-HOST-KEYWORD, speedtest
-USER-AGENT, SpeedTest*
+# https://github.com/blackmatrix7/ios_rule_script
+host, speed.dler.io, direct 
+host-suffix, fast.com, direct 
+host-suffix, ookla.com, direct 
+host-suffix, cdnst.net, direct 
+host-suffix, ekahau.com, direct 
+host-suffix, webtest.net, direct 
+host-suffix, pingtest.net, direct 
+host-suffix, speedtest.co, direct 
+host-suffix, cellmaps.com, direct 
+host-suffix, ekahau.cloud, direct 
+host-suffix, speed.dler.io, direct 
+host-suffix, speedtest.net, direct 
+host-suffix, ooklaserver.net, direct 
+host-suffix, ooklaserver.net, direct 
+host-suffix, test.nextlevel.net, direct 
+host-suffix, speedtestcustom.com, direct 
+host-suffix, speed.cloudflare.com, direct 
+host-keyword, speedtest, direct 
+user-agent, SpeedTest*, direct 
