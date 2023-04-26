@@ -31,7 +31,7 @@ host-suffix, msg.umengcloud.com, direct
 host-suffix, 51y5.net, direct
 # 汽水音乐
 host-suffix, qishui.com, direct
-# 茶壶杯
+# 茶壶杯影视
 host-keyword, cupfox, direct
 # 腾讯
 host, vd.l.qq.com, direct
