@@ -1,6 +1,6 @@
 /*================
 https://github.com/RuCu6/QuanX/blob/9a67ac7a83380a7c1cfaa23a3cfe7ac42a7a9ece/Scripts/bilibili/bili.js
-2023-04-25 20:20
+2023-04-27 15:31
 
 更改 tab
           item.name === "直播" ||
@@ -34,13 +34,6 @@ https://github.com/RuCu6/QuanX/blob/9a67ac7a83380a7c1cfaa23a3cfe7ac42a7a9ece/Scr
         uri: "bilibili://pegasus/hottopic", 
         pos: 2 
       }, 
-      { 
-        id: 151, 
-        tab_id: "film", 
-        name: "影视", 
-        uri: "bilibili://pgc/cinema-tab", 
-        pos: 3 
-      }, 
       {
         id: 1716,
         icon: "http://i0.hdslb.com/bfs/archive/38d2c2669a68eae8a53fc9afaa193aafa5265a78.png",
@@ -49,6 +42,13 @@ https://github.com/RuCu6/QuanX/blob/9a67ac7a83380a7c1cfaa23a3cfe7ac42a7a9ece/Scr
         uri: "bilibili://pegasus/vertical/13807",
         pos: 8
       },
+      { 
+        id: 151, 
+        tab_id: "film", 
+        name: "影视", 
+        uri: "bilibili://pgc/cinema-tab", 
+        pos: 3 
+      }, 
     ]; 
   }
   if (obj.data.top) {
@@ -90,13 +90,6 @@ if (url.includes("/x/resource/show/skin")) {
         uri: "bilibili://pegasus/hottopic", 
         pos: 2 
       }, 
-      { 
-        id: 151, 
-        tab_id: "film", 
-        name: "影视", 
-        uri: "bilibili://pgc/cinema-tab", 
-        pos: 3 
-      }, 
       {
         id: 1716,
         icon: "http://i0.hdslb.com/bfs/archive/38d2c2669a68eae8a53fc9afaa193aafa5265a78.png",
@@ -105,6 +98,13 @@ if (url.includes("/x/resource/show/skin")) {
         uri: "bilibili://pegasus/vertical/13807",
         pos: 8
       },
+      { 
+        id: 151, 
+        tab_id: "film", 
+        name: "影视", 
+        uri: "bilibili://pgc/cinema-tab", 
+        pos: 3 
+      }, 
     ]; 
   }
   if (obj.data.top) {
