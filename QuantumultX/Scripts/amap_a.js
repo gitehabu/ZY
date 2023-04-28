@@ -1,6 +1,6 @@
 /*================
 https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
-2023-04-25 09:38
+2023-04-25 12:58
 
 注释掉以下
 "reviews", // 用户评价
@@ -377,8 +377,15 @@ if (url.includes("/faas/amap-navigation/main-page")) {
       delete obj.data.modules[i];
     });
   }
+} else if (url.includes("/shield/search_poi/city_feed")) {
+  const item = ["city_feed", "transportation"];
+  if (obj.modules) {
+    item.forEach((i) => {
+      delete obj.modules[i];
+    });
+  }
 } else if (url.includes("/shield/search_poi/search/sp")) {
-  if (obj.data.list_data) {
+  if (obj.data?.list_data) {
     let list = obj.data.list_data.content[0];
     // 详情页 底部 房产推广
     if (list?.hookInfo) {
@@ -421,6 +428,17 @@ if (url.includes("/faas/amap-navigation/main-page")) {
       list?.item_type === "ImageBanner"
     ) {
       delete list.card;
+    }
+  } else if (obj.data?.district?.poi_list) {
+    // 搜索列表详情页
+    let poi = obj.data.district.poi_list[0];
+    // 订票横幅
+    if (poi?.transportation) {
+      delete poi.transportation;
+    }
+    // 景点门票 酒店特惠 特色美食 休闲玩乐
+    if (poi?.feed_rec_tab) {
+      delete poi.feed_rec_tab;
     }
   }
 } else if (
