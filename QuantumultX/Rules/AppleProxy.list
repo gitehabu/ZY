@@ -1,28 +1,61 @@
-# https://github.com/kokoryh/Script/blob/master/Surge/rule/AppleProxy.list
+# https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Ruleset/Apple.list
+# 内容：AppleDirect
+# 数量：28条
+host, apple.comscoreresearch.com, direct
+host-suffix, aaplimg.com, direct
+host-suffix, akadns.net, direct
+host-suffix, apple-cloudkit.com, direct
+host-suffix, apple-mapkit.com, direct
+host-suffix, apple.co, direct
+host-suffix, apple.com, direct
+host-suffix, apple.com.cn, direct
+host-suffix, apple.news, direct
+host-suffix, appstore.com, direct
+host-suffix, cdn-apple.com, direct
+host-suffix, crashlytics.com, direct
+host-suffix, icloud-content.com, direct
+host-suffix, icloud.com, direct
+host-suffix, icloud.com.cn, direct
+host-suffix, itunes.com, direct
+host-suffix, me.com, direct
+host-suffix, mzstatic.com, direct
+ip-cidr,17.0.0.0/8, direct
+ip-cidr,63.92.224.0/19, direct
+ip-cidr,65.199.22.0/23, direct
+ip-cidr,139.178.128.0/18, direct
+ip-cidr,144.178.0.0/19, direct
+ip-cidr,144.178.36.0/22, direct
+ip-cidr,144.178.48.0/20, direct
+ip-cidr,192.35.50.0/24, direct
+ip-cidr,198.183.17.0/24, direct
+ip-cidr,205.180.175.0/24, direct
 
-DOMAIN,amp-api.podcasts.apple.com
-DOMAIN,apple.comscoreresearch.com
-DOMAIN,beta.music.apple.com
-DOMAIN,books.apple.com
-DOMAIN,books.itunes.apple.com
-DOMAIN,cvws.icloud-content.com
-DOMAIN,developer.apple.com
-DOMAIN,gateway.icloud.com
-DOMAIN,gspe1-ssl.ls.apple.com
-DOMAIN,itunes.apple.com
-DOMAIN,lookup-api.apple.com
-DOMAIN,news-assets.apple.com
-DOMAIN,news-client-search.apple.com
-DOMAIN,news-client.apple.com
-DOMAIN,news-edge.apple.com
-DOMAIN,news-events.apple.com
-DOMAIN,radio.itunes.apple.com
-DOMAIN,sandbox.itunes.apple.com
-DOMAIN,tv.apple.com
-DOMAIN-SUFFIX,apple-dns.net
-DOMAIN-SUFFIX,apple.news
-DOMAIN-SUFFIX,apps.apple.com
-DOMAIN-SUFFIX,appsto.re
-DOMAIN-SUFFIX,blobstore.apple.com
-DOMAIN-SUFFIX,digicert.com
-DOMAIN-SUFFIX,smoot.apple.com
+# https://github.com/kokoryh/Script/blob/master/Surge/rule/AppleProxy.list
+# 内容：AppleProxy
+# 数量：26条
+host, amp-api.podcasts.apple.com, Select
+host, apple.comscoreresearch.com, Select
+host, beta.music.apple.com, Select
+host, books.apple.com, Select
+host, books.itunes.apple.com, Select
+host, cvws.icloud-content.com, Select
+host, developer.apple.com, Select
+host, gateway.icloud.com, Select
+host, gspe1-ssl.ls.apple.com, Select
+host, itunes.apple.com, Select
+host, lookup-api.apple.com, Select
+host, news-assets.apple.com, Select
+host, news-client-search.apple.com, Select
+host, news-client.apple.com, Select
+host, news-edge.apple.com, Select
+host, news-events.apple.com, Select
+host, radio.itunes.apple.com, direct
+host, sandbox.itunes.apple.com, Select
+host, tv.apple.com, Select
+host-suffix, apple-dns.net, Select
+host-suffix, apple.news, Select
+host-suffix, apps.apple.com, Select
+host-suffix, appsto.re, Select
+host-suffix, blobstore.apple.com, Select
+host-suffix, digicert.com, Select
+host-suffix, smoot.apple.com, Select
