@@ -29,33 +29,3 @@ ip-cidr,144.178.48.0/20, direct
 ip-cidr,192.35.50.0/24, direct
 ip-cidr,198.183.17.0/24, direct
 ip-cidr,205.180.175.0/24, direct
-
-# https://github.com/kokoryh/Script/blob/master/Surge/rule/AppleProxy.list
-# 内容：AppleProxy
-# 数量：26条
-host, amp-api.podcasts.apple.com, Select
-host, apple.comscoreresearch.com, Select
-host, beta.music.apple.com, Select
-host, books.apple.com, Select
-host, books.itunes.apple.com, Select
-host, cvws.icloud-content.com, Select
-host, developer.apple.com, Select
-host, gateway.icloud.com, Select
-host, gspe1-ssl.ls.apple.com, Select
-host, itunes.apple.com, Select
-host, lookup-api.apple.com, Select
-host, news-assets.apple.com, Select
-host, news-client-search.apple.com, Select
-host, news-client.apple.com, Select
-host, news-edge.apple.com, Select
-host, news-events.apple.com, Select
-host, radio.itunes.apple.com, direct
-host, sandbox.itunes.apple.com, Select
-host, tv.apple.com, Select
-host-suffix, apple-dns.net, Select
-host-suffix, apple.news, Select
-host-suffix, apps.apple.com, Select
-host-suffix, appsto.re, Select
-host-suffix, blobstore.apple.com, Select
-host-suffix, digicert.com, Select
-host-suffix, smoot.apple.com, Select
