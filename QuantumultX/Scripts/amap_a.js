@@ -3,17 +3,18 @@ https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
 2023-04-29 23:32
 
 注释掉以下
-"reviews", // 用户评价
-"checkIn",
-"check_in", // 足迹打卡
-"footprint", // 足迹
-"isNewSearchMapCard", // 可能是足迹
-"contributor", // 地点贡献
+  // 搜索结果 模块详情
+    // "reviews", // 用户评价
+    // "checkIn",
+    // "check_in", // 足迹打卡
+    // "footprint", // 足迹
+    // "isNewSearchMapCard", // 可能是足迹
+    // "contributor", // 地点贡献
 
 新增以下
-搜索结果 模块详情
-"group_buying", // 口碑的医院体检推广
-"group_buying_shelf", // 口碑的医院体检推广
+  // 搜索结果 模块详情
+    "group_buying", // 口碑的医院体检推广
+    "group_buying_shelf", // 口碑的医院体检推广
 
 ================*/
 
@@ -150,7 +151,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "collect",
     "deviceml_force_recommend",
     "deviceml_update_apk_conf",
-    "footprint", // 足迹
+    // "footprint", // 足迹
     "gd_code_cover",
     "gd_notch_logo",
     "his_input_tip",
@@ -235,6 +236,8 @@ if (url.includes("/faas/amap-navigation/main-page")) {
 } else if (url.includes("/shield/search/poi/detail")) {
   // 搜索结果 模块详情
   const item = [
+    "group_buying", // 口碑的医院体检推广
+    "group_buying_shelf", // 口碑的医院体检推广
     // "anchor",
     "adv_compliance_info", // 服务提供方
     "adv_gift",
@@ -243,8 +246,8 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     // "brand_introduction",
     "brand_shop_bar",
     // "brand_story",
-    "checkIn",
-    "check_in", // 足迹打卡
+    // "checkIn",
+    // "check_in", // 足迹打卡
     "city_discount", // 专业老师在线答疑
     "claim", // 立即认领 管理店铺
     "co_branded_card",
@@ -330,7 +333,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "rentsaleagencyv3",
     "rentsalehouse",
     "residentialOwners", // 小区业主
-    "reviews", // 用户评价
+    // "reviews", // 用户评价
     // "roomSelect", // 选择订房日期 悬浮菜单
     "sameIndustryRecommendModule",
     "sameIndustry2RecommendModule",
