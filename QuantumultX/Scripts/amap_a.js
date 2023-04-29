@@ -1,6 +1,6 @@
 /*================
 https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
-2023-04-25 12:58
+2023-04-29 23:32
 
 注释掉以下
 "reviews", // 用户评价
@@ -20,6 +20,7 @@ https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
 const url = $request.url;
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
+
 if (url.includes("/faas/amap-navigation/main-page")) {
   // 首页底部卡片
   if (obj.data.cardList) {
@@ -149,7 +150,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "collect",
     "deviceml_force_recommend",
     "deviceml_update_apk_conf",
-    // "footprint", // 足迹
+    "footprint", // 足迹
     "gd_code_cover",
     "gd_notch_logo",
     "his_input_tip",
@@ -164,7 +165,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "info_env_setting",
     "ip_square",
     "ip_square_share",
-    // "isNewSearchMapCard", // 可能是足迹
+    "isNewSearchMapCard", // 可能是足迹
     "isPoiBubbleDisplay",
     "lab_beta",
     "lab_screenrecording",
@@ -235,8 +236,6 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   // 搜索结果 模块详情
   const item = [
     // "anchor",
-    "group_buying", // 口碑的医院体检推广
-    "group_buying_shelf", // 口碑的医院体检推广
     "adv_compliance_info", // 服务提供方
     "adv_gift",
     // "base_info",
@@ -244,8 +243,8 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     // "brand_introduction",
     "brand_shop_bar",
     // "brand_story",
-    // "checkIn",
-    // "check_in", // 足迹打卡
+    "checkIn",
+    "check_in", // 足迹打卡
     "city_discount", // 专业老师在线答疑
     "claim", // 立即认领 管理店铺
     "co_branded_card",
@@ -253,7 +252,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "common_coupon_bar", // 领券条幅 新客专享 省钱卡
     "comprehensiveEditEntrance", // 编辑地点信息
     // "consultancy",
-    // "contributor", // 地点贡献
+    "contributor", // 地点贡献
     // "coupon_allowance",
     // "coupon_entrance",
     "cpt_service_shop", //买卖二手房
@@ -331,7 +330,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "rentsaleagencyv3",
     "rentsalehouse",
     "residentialOwners", // 小区业主
-    // "reviews", // 用户评价
+    "reviews", // 用户评价
     // "roomSelect", // 选择订房日期 悬浮菜单
     "sameIndustryRecommendModule",
     "sameIndustry2RecommendModule",
@@ -445,14 +444,17 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   url.includes("/shield/search_poi/sug") ||
   url.includes("/shield/search/sug")
 ) {
-  if (obj?.tip_list && obj?.sug_general_search === "1") {
+  if (obj?.tip_list) {
     let newList = [];
     if (obj?.tip_list?.length > 0) {
       for (let item of obj.tip_list) {
-        if (item?.tip?.is_user_input === "1") {
-          newList.push(item);
-        } else {
+        if (
+          ["query_sug_merge_theme", "sp"].includes(item?.tip?.task_tag) ||
+          ["toplist"].includes(item?.tip?.result_type)
+        ) {
           continue;
+        } else {
+          newList.push(item);
         }
       }
       obj.tip_list = newList;
@@ -491,4 +493,5 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     }
   }
 }
+
 $done({ body: JSON.stringify(obj) });
