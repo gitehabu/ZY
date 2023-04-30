@@ -197,6 +197,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             if (
               item?.adType === "相关内容" ||
               item?.adType === "相关评论" ||
+              item?.adType === "Recommend" ||
               item?.adType === "推荐"
             ) {
               continue;
