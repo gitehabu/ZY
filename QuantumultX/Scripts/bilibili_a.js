@@ -67,7 +67,6 @@ if (url.includes("/x/resource/show/skin")) {
   }
 } else if (url.includes("/x/resource/show/tab/v2")) {
   // 标签页
-  // 标签页
   if (obj.data.tab) {
     obj.data.tab = [ 
       { 
