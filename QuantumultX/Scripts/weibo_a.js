@@ -1,6 +1,6 @@
 /*================
 https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
-2023-04-26 12:55
+2023-04-30 09:00
 
 注释掉 评论区铁粉标识、头像挂件、关注按钮
 /2/comments/build_comments
@@ -373,7 +373,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
           newItems.push(item);
         } else if (itemId === "100505_-_top8") {
-         /* if (item.items) {
+      /* if (item.items) {
             item.items = item.items.filter(
               (i) =>
                 i.itemId === "100505_-_album" || // 我的相册
@@ -502,8 +502,13 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               removeAvatar(group.mblog);
             }
             let cardType = group.card_type;
-            // 17正在热搜卡片 22信息流横版广告图 25超话卡片(单个) 42正在热搜标题 182超话卡片(多个)
-            if (![17, 22, 25, 42, 118, 182].includes(cardType)) {
+            // 3 信息流商家卡片
+            // 17 正在热搜卡片
+            // 22 信息流横版广告图
+            // 25 超话卡片(单个)
+            // 42 正在热搜标题
+            // 182 超话卡片(多个)
+            if (![3, 17, 22, 25, 42, 118, 182].includes(cardType)) {
               if (!isAd(group.mblog)) {
                 // 商品橱窗
                 if (group.mblog?.common_struct) {
@@ -692,13 +697,16 @@ if (url.includes("/interface/sdk/sdkad.php")) {
 // 判断信息流
 function isAd(data) {
   if (data) {
-    if (data?.mblogtypename === "广告") {
+    if (data?.mblogtypename?.includes("广告")) {
       return true;
     }
-    if (data?.mblogtypename === "热推") {
+    if (data?.mblogtypename?.includes("热推")) {
       return true;
     }
-    if (data?.promotion?.type === "ad") {
+    if (data?.promotion?.type?.includes("ad")) {
+      return true;
+    }
+    if (data?.content_auth_info?.content_auth_title?.includes("广告")) {
       return true;
     }
   }
@@ -741,7 +749,7 @@ function checkSearchWindow(item) {
     item.data?.card_type === 208 || // 实况热聊
     item.data?.card_type === 217 ||
     item.data?.card_type === 1005 ||
-    item.data?.itemid === "more_frame" ||
+    item.data?.itemid?.includes("more_frame") ||
     item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
   ) {
     return true;
