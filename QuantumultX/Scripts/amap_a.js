@@ -1,6 +1,6 @@
 /*================
 https://github.com/RuCu6/QuanX/blob/main/Scripts/amap.js
-2023-04-29 23:32
+2023-04-30 11:05
 
 注释掉以下
   // 搜索结果 模块详情
@@ -445,7 +445,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   }
 } else if (
   url.includes("/shield/search_poi/sug") ||
-  url.includes("/shield/search/sug") ||
+  url.includes("/shield/search/sug")
 ) {
   if (obj?.tip_list) {
     let newList = [];
