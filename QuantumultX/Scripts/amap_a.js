@@ -446,7 +446,6 @@ if (url.includes("/faas/amap-navigation/main-page")) {
 } else if (
   url.includes("/shield/search_poi/sug") ||
   url.includes("/shield/search/sug") ||
-  url.includes("shield/search/back_sug")
 ) {
   if (obj?.tip_list) {
     let newList = [];
