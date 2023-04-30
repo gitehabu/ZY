@@ -1,11 +1,12 @@
 /*================
 https://github.com/RuCu6/QuanX/blob/main/Scripts/zhihu.js
-2023-04-11 12:00
+2023-04-30 10:00
 ================*/
 
 if (!$response.body) $done({});
 const url = $request.url;
 let body = $response.body;
+
 if (url.includes("/appview/v3/zhmore")) {
   // 我的页面
   body = body.replace(/<\/style><main.*<\/div><\/main>/g, "");
@@ -86,10 +87,15 @@ if (url.includes("/appview/v3/zhmore")) {
     if (obj.data) {
       obj.data = obj.data.filter((i) => !i?.title?.includes("为您推荐"));
     }
+  } else if (url.includes("/next-bff")) {
+    if (obj.data) {
+      obj.data = obj.data.filter((i) => !i?.origin_data?.type?.includes("ad"));
+    }
   } else if (url.includes("/next-data")) {
     if (obj.data.data) {
       obj.data.data = obj.data.data.filter(
-        (i) => !(i?.type?.includes("ad") || i?.data?.answer_type === "PAID")
+        (i) =>
+          !(i?.type?.includes("ad") || i?.data?.answer_type?.includes("PAID"))
       );
     }
   } else if (url.includes("/people/homepage_entry")) {
