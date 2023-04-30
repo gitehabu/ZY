@@ -1,11 +1,11 @@
-# Name   Filter
-# Author @RuCu6, @ddgksf2013, @kokoryh, @blackmatrix7, @app2smile, @DivineEngine, @zhangjun, @lwd-temp, @NobyDa
-# Update 2023-04-26 20:00
+# Name   Filters
+# Author @RuCu6, @ddgksf2013, @kokoryh, @blackmatrix7, @app2smile, @DivineEngine, @zhangjun, @NobyDa, @ACL4SSR
+# Update 2023-04-30 11:50
 # “#” “;" “//” 是注释符号，去掉符号该行才生效
 # 开启「分流匹配优化」选项，则匹配优先级如下
 ; host > host-suffix > host-keyword(wildcard) > geoip = ip-cidr > user-agent
 ; 完整域名匹配
-//host, www.google.com, select
+//host, www.google.com, Static
 ; 域名后缀匹配
 //host-suffix, baidu.com, direct
 ; 域名关键词匹配
@@ -14,6 +14,9 @@
 //host-wildcard, *abc.com, proxy
 ; user-agent
 //user-agent, ?abc*, proxy
+
+
+
 
 # ===== direct ===== #
 # 微博
@@ -44,43 +47,73 @@ host-suffix, ipleak.net, direct
 host-keyword, tkys, direct
 
 # ===== PROXY ===== #
-# 可把 Select 换成任意 策略组/节点
+# 可把 Static 换成任意 策略组/节点
+# AppleProxy
+; 数量：26条
+; https://github.com/kokoryh/Script/blob/master/Surge/rule/AppleProxy.list
+host, amp-api.podcasts.apple.com, Static
+host, apple.comscoreresearch.com, Static
+host, beta.music.apple.com, Static
+host, books.apple.com, Static
+host, books.itunes.apple.com, Static
+host, cvws.icloud-content.com, Static
+host, developer.apple.com, Static
+host, gateway.icloud.com, Static
+host, gspe1-ssl.ls.apple.com, Static
+host, itunes.apple.com, Static
+host, lookup-api.apple.com, Static
+host, news-assets.apple.com, Static
+host, news-client-search.apple.com, Static
+host, news-client.apple.com, Static
+host, news-edge.apple.com, Static
+host, news-events.apple.com, Static
+host, radio.itunes.apple.com, Static
+host, sandbox.itunes.apple.com, Static
+host, tv.apple.com, Static
+host-suffix, apple-dns.net, Static
+host-suffix, apple.news, Static
+host-suffix, apps.apple.com, Static
+host-suffix, appsto.re, Static
+host-suffix, blobstore.apple.com, Static
+host-suffix, digicert.com, Static
+host-suffix, smoot.apple.com, Static
 # 必应国际版(不开分流则国内版)
-host, www.bing.com, Select
+host, www.bing.com, Static
 # Apple
-host-suffix, testflight.apple.com, Select
+host-suffix, testflight.apple.com, Static
 # 机场
-host-suffix, subs.usero.cn, Select
-host-keyword, fishchips, Select
-host-keyword, efcloud, Select
-host-keyword, efshop, Select
-host-keyword, mojie, Select
-host-keyword, xsus, Select
+host-suffix, subs.usero.cn, Static
+host-keyword, fishchips, Static
+host-keyword, efcloud, Static
+host-keyword, efshop, Static
+host-keyword, mojie, Static
+host-keyword, xsus, Static
 # 代理软件激活检测
-host-suffix, nssurge.com, Select
-host-suffix, quantumult.app, Select
-host-suffix, surge-activation.com, Select
-host-suffix, stash-activation.com, Select
+host-suffix, nssurge.com, Static
+host-suffix, quantumult.app, Static
+host-suffix, surge-activation.com, Static
+host-suffix, stash-activation.com, Static
 # 其他
-host-suffix, shrtm.nu, Select
-host-suffix, adtidy.org, Select
-host-suffix, adguard.com, Select
-host-suffix, adguard.org, Select
-host-suffix, missav.com, Select
-host-suffix, cdnedge.live, Select
-host-keyword, v2ex, Select
-host-keyword, loon, Select
-host-keyword, notion, Select
+host-suffix, shrtm.nu, Static
+host-suffix, adtidy.org, Static
+host-suffix, adguard.com, Static
+host-suffix, adguard.org, Static
+host-suffix, missav.com, Static
+host-suffix, cdnedge.live, Static
+host-keyword, v2ex, Static
+host-keyword, loon, Static
+host-keyword, notion, Static
 
 # ===== reject ===== #
 # 安全浏览限制解除
-host, lookup.api.bsb.baidu.com, reject
-host, proxy.safebrowsing.apple, reject
-host, safebrowsing.g.applimg.com, reject
-host, safebrowsing.googleapis.com, reject
-host, safebrowsing.urlsec.qq.com, reject
-host, token.safebrowsing.apple, reject
 host, u3.ucweb.com, reject
+host, lookup.api.bsb.baidu.com, reject
+host, safebrowsing.g.applimg.com, reject
+host, safebrowsing.urlsec.qq.com, reject
+host, safebrowsing.googleapis.com, reject
+host, proxy.safebrowsing.apple, reject
+host, token.safebrowsing.apple, reject
+host-suffix, safebrowsing.apple, reject
 # 知乎
 host, mqtt.zhihu.com, reject
 host, sugar.zhihu.com, reject
@@ -182,11 +215,14 @@ host, ocsp.apple.com, reject
 host, app-site-association.cdn-apple.com, reject
 # Google
 host, ads.youtube.com, reject
+host, adservice.google.com, reject
+host, www.googleadservices.com, reject
 host-suffix, doubleclick.net, reject
 host-suffix, googleadservices.com, reject
-host-suffix, googleadsserving.cn, reject
+host-suffix, googleadsserving.com, reject
 host-suffix, googlesyndication.com, reject
 host-suffix, googletagservices.com, reject
+host-wildcard, adservice.google.com.??, reject
 # Amazon AD
 host-suffix, amazon-adsystem.com, reject
 # > 网易云音乐
@@ -235,6 +271,7 @@ host-suffix, openapi.mtlab.meitu.com, reject
 host-suffix, xiuxiu-im-route.meitu.com, reject
 host-suffix, push.meitu.com, reject
 host-suffix, i.qchannel03.cn, reject
+; 美图秀秀_开屏
 host-suffix, adui.tg.meitu.com, reject
 # 工商银行_开屏
 host, pageviewp.icbc.com.cn, reject
@@ -244,12 +281,6 @@ host, wimg.yangshipin.cn, reject
 host-suffix, shuzilm.cn, reject
 # 快手联盟
 host, open.e.kuaishou.com, reject
-# 虎牙直播开屏广告
-host, pp-cdnfile2pcdn.msstatic.com, reject
-host, livewebbs2pcdn.msstatic.com, reject
-host, huyafile.msstatic.com, reject
-host, livewebbs2.msstatic.com, reject
-host, business.msstatic.com, reject
 # 其他
 host-keyword, adsystem, reject
 host-keyword, adservice, reject
