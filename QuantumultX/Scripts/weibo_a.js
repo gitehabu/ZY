@@ -2,11 +2,11 @@
 https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
 2023-04-30 09:00
 
-注释掉 评论区铁粉标识、头像挂件、关注按钮
+  //注释掉 评论区铁粉标识、头像挂件、关注按钮
 /2/comments/build_comments
            // removeAvatar(item.data);
 
-注释掉 我的页面 top8 卡片
+  //注释掉 我的页面 top8 卡片
           newItems.push(item);
         } else if (itemId === "100505_-_top8") {
    注释 /* if (item.items) {
@@ -26,6 +26,12 @@ https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
         } else if (itemId === "100505_-_manage") {
           if (item.style) {
             
+  //英文 评论区推广
+              item?.adType === "相关内容" ||
+              item?.adType === "相关评论" ||
+              item?.adType === "Recommend" ||
+              item?.adType === "推荐"
+
 ================*/
 
 const url = $request.url;
@@ -658,11 +664,11 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       delete obj.button_configs;
     }
     // 广场页
-    if (obj.channelInfo.channel_list) {
+ /* if (obj.channelInfo.channel_list) {
       obj.channelInfo.channel_list = obj.channelInfo.channel_list.filter(
         (t) => t.title !== "广场"
       );
-    }
+    } */
   } else if (url.includes("/v1/ad/preload")) {
     // 开屏广告
     if (obj.ads) {
