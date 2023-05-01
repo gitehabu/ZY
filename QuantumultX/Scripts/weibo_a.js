@@ -26,7 +26,7 @@ https://github.com/RuCu6/QuanX/blob/main/Scripts/weibo.js
         } else if (itemId === "100505_-_manage") {
           if (item.style) {
             
-  //英文 评论区推广
+  //英文 评论区推荐 Recommend
               item?.adType === "相关内容" ||
               item?.adType === "相关评论" ||
               item?.adType === "Recommend" ||
