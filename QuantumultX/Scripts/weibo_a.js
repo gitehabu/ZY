@@ -664,11 +664,11 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       delete obj.button_configs;
     }
     // 广场页
- /* if (obj.channelInfo.channel_list) {
+   if (obj.channelInfo.channel_list) {
       obj.channelInfo.channel_list = obj.channelInfo.channel_list.filter(
         (t) => t.title !== "广场"
       );
-    } */
+    }
   } else if (url.includes("/v1/ad/preload")) {
     // 开屏广告
     if (obj.ads) {
